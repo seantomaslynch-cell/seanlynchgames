@@ -162,6 +162,18 @@ h1.title{font-size:clamp(44px,7vw,96px);font-size:clamp(44px,15cqi,104px);line-h
 .scard.log{gap:2.2cqw}
 .scard.log .row2{font-size:3.7cqw}
 
+/* compact grid of games 2-5 */
+.grid{display:grid;grid-template-columns:minmax(0,1fr);gap:12px;max-width:1440px;margin-inline:auto;padding:12px max(12px,env(safe-area-inset-right)) 12px max(12px,env(safe-area-inset-left))}
+.grid .chapter{border-radius:28px;scroll-margin-top:84px}
+.grid .ch-de{box-shadow:inset 0 0 0 1px rgba(62,224,138,.28)}
+.grid .chapter>.wrap{max-width:none;gap:24px;padding:clamp(28px,4.5vw,48px) clamp(20px,4vw,48px) 0;align-items:end}
+.grid .title{font-size:clamp(40px,13cqi,84px)}
+.grid .pitch{font-size:clamp(18px,1.8vw,21px)}
+.grid .qr{display:none}
+.grid .stage{height:240px;overflow:hidden;align-content:start;-webkit-mask-image:linear-gradient(180deg,#000 72%,transparent);mask-image:linear-gradient(180deg,#000 72%,transparent)}
+.grid .scene{width:min(70%,230px)}
+#lifeline .appicon{view-transition-name:icon-lifeline}#hardwood-gm .appicon{view-transition-name:icon-hardwood-gm}#gridiron-gm .appicon{view-transition-name:icon-gridiron-gm}#gatecrash-army .appicon{view-transition-name:icon-gatecrash-army}#diamondedge .appicon{view-transition-name:icon-diamondedge}
+@media (prefers-reduced-motion:no-preference){@view-transition{navigation:auto}}
 
 /* rail */
 .rail{position:sticky;top:0;z-index:20;background:var(--bg);border-bottom:1px solid var(--line)}
@@ -177,12 +189,18 @@ img.ico{object-fit:cover;background:#111}
 .rail a.on .lbl{color:var(--ink)}
 
 /* studio */
-.studio{background:var(--accent);color:var(--ink);border:0;padding-block:clamp(48px,8vw,96px)}
+.studio{background:var(--surface);color:var(--fg);border-top:1px solid var(--line);padding-block:clamp(48px,8vw,96px)}
+.studio h2::after{content:"";display:block;width:56px;height:6px;border-radius:3px;background:var(--accent);margin-top:16px}
+.side{display:grid;gap:28px;align-content:start}
+.dcard{background:#5865f2;color:#fff;border-radius:24px;padding:28px;display:grid;gap:10px;box-shadow:0 24px 48px -28px rgba(88,101,242,.8)}
+.dcard .dk{margin:0;font-size:13px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#ffc21a}
+.studio .dcard .dt{margin:0;font-size:clamp(19px,2vw,23px);font-weight:600;line-height:1.3;max-width:26ch}
+.djoin{justify-self:start;display:inline-flex;align-items:center;min-height:48px;margin-top:8px;padding:0 20px;border-radius:12px;background:#fff;color:#101418;font-weight:800;text-decoration:none}.djoin:hover{background:#ffc21a}
 .studio h2,.support h2{font-family:var(--display);font-variation-settings:"wdth" 62;font-stretch:62%;font-weight:800;text-transform:uppercase;font-size:clamp(40px,6vw,72px);line-height:.92;margin:0 0 20px}
 .studio p{font-size:clamp(20px,2.6vw,30px);font-weight:500;line-height:1.3;max-width:34ch;margin:0}
-.social{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-top:14px}.social a{display:inline-flex;align-items:center;gap:8px;min-height:48px;padding:0 16px;border-radius:12px;border:2px solid #101418;color:#101418;font-weight:700;text-decoration:none}.social a:hover{background:#101418;color:#fff}.social svg{width:20px;height:20px}.social .handle{font-weight:700;opacity:.75}
-.mail{display:inline-flex;align-items:center;min-height:48px;margin-top:28px;padding:0 20px;border-radius:12px;background:#101418;color:#fff;font-weight:700;text-decoration:none}
-.studio-icons{display:flex;flex-wrap:wrap;gap:14px;margin-top:32px}
+.social{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-top:14px}.social a{display:inline-flex;align-items:center;gap:8px;min-height:48px;padding:0 16px;border-radius:12px;border:2px solid var(--fg);color:var(--fg);font-weight:700;text-decoration:none}.social a:hover{background:var(--fg);color:var(--bg)}.social svg{width:20px;height:20px}.social .handle{font-weight:700;opacity:.75}
+.mail{display:inline-flex;align-items:center;min-height:48px;margin-top:28px;padding:0 20px;border-radius:12px;background:var(--fg);color:var(--bg);font-weight:700;text-decoration:none}
+.studio-icons{display:flex;flex-wrap:wrap;gap:14px}
 .studio-icons a{display:block;width:72px;height:72px;border-radius:18px}
 .studio-icons img{width:72px;height:72px;border-radius:18px;background:#111;box-shadow:0 6px 16px -6px rgba(0,0,0,.45)}
 
@@ -216,7 +234,6 @@ html.ios .stores .store[href*="play.google.com"],html.ios .bar .store[href*="pla
 @media (min-width:760px){
   .chapter>.wrap{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px}
   .studio .wrap{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:56px;align-items:center}
-  .studio-icons{margin-top:0}
   .chapter.flip .copy{order:2}
   .chapter.flip .stage{order:1}
   .lbl{display:inline}
@@ -224,8 +241,17 @@ html.ios .stores .store[href*="play.google.com"],html.ios .bar .store[href*="pla
 }
 @media (min-width:760px) and (max-width:1023.98px){
   .hero>.wrap{grid-template-columns:minmax(0,1fr)}
+  .grid .copy{padding-bottom:44px;align-self:center}
+  .grid .stage{height:380px;-webkit-mask-image:none;mask-image:none}
+  .grid .scene{width:min(90%,260px)}
 }
 @media (min-width:1024px){
+  .grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;padding:16px max(16px,env(safe-area-inset-right)) 16px max(16px,env(safe-area-inset-left))}
+  .grid .chapter>.wrap{grid-template-columns:minmax(0,1fr)}
+  .grid .chapter.flip .copy,.grid .chapter.flip .stage{order:0}
+  .grid .stage{height:280px;-webkit-mask-image:none;mask-image:none}
+  .grid .scene{width:min(62%,240px)}
+  .grid .motif,.grid .flip .motif{-webkit-mask-image:linear-gradient(180deg,transparent 20%,#000 85%);mask-image:linear-gradient(180deg,transparent 20%,#000 85%)}
   .hero .fan .phone-wrap{width:min(42%,270px)}
   .fan .peek.l{transform:translate(calc(-50% - 60%),4%) rotate(-9deg) scale(.87)}
   .fan .peek.r{transform:translate(calc(-50% + 60%),4%) rotate(9deg) scale(.87)}
@@ -336,6 +362,7 @@ html.ios .stores .store[href*="play.google.com"],html.ios .bar .store[href*="pla
   </div>
 </nav>
 
+<div class="grid">
 <!-- HARDWOOD GM -->
 <section class="chapter ch-hw" id="hardwood-gm" data-game="Hardwood GM" aria-labelledby="h-hw">
   <svg class="motif" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
@@ -447,6 +474,7 @@ html.ios .stores .store[href*="play.google.com"],html.ios .bar .store[href*="pla
     </div>
   </div>
 </section>
+</div>
 
 <!-- STUDIO -->
 <section class="studio" id="studio" aria-labelledby="h-studio">
@@ -464,12 +492,19 @@ html.ios .stores .store[href*="play.google.com"],html.ios .bar .store[href*="pla
         <span class="handle">@NaesOfficial</span>
       </div>
     </div>
+    <div class="side">
+      <div class="dcard">
+        <p class="dk">Get updates</p>
+        <p class="dt">Patch notes, sneak peeks and early news land in the Discord first.</p>
+        <a class="djoin" href="https://discord.gg/RfzHaZznNZ" rel="noopener">Join the Discord</a>
+      </div>
     <div class="studio-icons">
       <a href="#lifeline" aria-label="LifeLine"><img src="img/lifeline-144.webp" alt="" width="72" height="72"></a>
       <a href="#hardwood-gm" aria-label="Hardwood GM"><img src="img/hardwood-gm-144.webp" alt="" width="72" height="72"></a>
       <a href="#gridiron-gm" aria-label="Gridiron GM"><img src="img/gridiron-gm-144.webp" alt="" width="72" height="72"></a>
       <a href="#gatecrash-army" aria-label="Gatecrash Army"><img src="img/gatecrash-army-144.webp" alt="" width="72" height="72"></a>
       <a href="#diamondedge" aria-label="DiamondEdge"><img src="img/diamondedge-144.webp" alt="" width="72" height="72"></a>
+    </div>
     </div>
   </div>
 </section>
@@ -507,7 +542,7 @@ html.ios .stores .store[href*="play.google.com"],html.ios .bar .store[href*="pla
         </div>
       </div>
       <nav class="ft-col" aria-label="Games"><p class="ft-h">Games</p><ul><li><a href="/lifeline/">LifeLine</a></li><li><a href="/hardwood-gm/">Hardwood GM</a></li><li><a href="/gridiron-gm/">Gridiron GM</a></li><li><a href="/gatecrash-army/">Gatecrash Army</a></li><li><a href="/diamondedge/">DiamondEdge</a></li></ul></nav>
-      <nav class="ft-col" aria-label="Support"><p class="ft-h">Support</p><ul><li><a href="mailto:support@seanlynchgames.com">Email support</a></li><li><a href="https://discord.gg/RfzHaZznNZ" rel="noopener">Discord community</a></li><li><a href="https://apps.apple.com/developer/id6804358221" rel="noopener">App Store</a></li><li><a href="https://play.google.com/store/apps/developer?id=Sean+T+Lynch" rel="noopener">Google Play</a></li></ul></nav>
+      <nav class="ft-col" aria-label="Support"><p class="ft-h">Support</p><ul><li><a href="mailto:support@seanlynchgames.com">Email support</a></li><li><a href="https://discord.gg/RfzHaZznNZ" rel="noopener">Discord community</a></li><li><a href="/press/">Press kit</a></li><li><a href="https://apps.apple.com/developer/id6804358221" rel="noopener">App Store</a></li><li><a href="https://play.google.com/store/apps/developer?id=Sean+T+Lynch" rel="noopener">Google Play</a></li></ul></nav>
     </div>
     <div class="ft-bot"><span>&copy; 2026 Sean Lynch Games</span><a href="mailto:support@seanlynchgames.com">support@seanlynchgames.com</a></div>
   </div>
@@ -594,14 +629,16 @@ html.ios .stores .store[href*="play.google.com"],html.ios .bar .store[href*="pla
       updateBar();
     },{rootMargin:'0px 0px -84px 0px'});
     [].slice.call(document.querySelectorAll('.chapter .stores')).forEach(function(n){ so.observe(n); });
-    var vis = {};
+    var vis = {}, lockUntil = 0;
     var co = new IntersectionObserver(function(es){
       es.forEach(function(e){ vis[e.target.id] = e.isIntersecting; });
+      if(Date.now() < lockUntil || (current && vis[current.id])) return;
       var hit = null;
-      chapters.forEach(function(c){ if(vis[c.id]) hit = c; });
+      chapters.forEach(function(c){ if(!hit && vis[c.id]) hit = c; });
       setCurrent(hit);
     },{rootMargin:'-45% 0px -50% 0px',threshold:0});
     chapters.forEach(function(c){ co.observe(c); });
+    links.forEach(function(a){ a.addEventListener('click', function(){ var t = document.getElementById(a.getAttribute('data-for')); if(t){ lockUntil = Date.now() + 1500; setCurrent(t); } }); });
   }
 
   if(document.fonts && document.fonts.ready) document.fonts.ready.then(function(){ movePill(rail.querySelector('a.on')); });

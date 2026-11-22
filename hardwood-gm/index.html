@@ -17,7 +17,7 @@
 <meta name="twitter:title" content="Hardwood GM: Basketball Management Sim for iPhone and Android | Sean Lynch Games">
 <meta name="twitter:description" content="Hardwood GM is a free basketball management sim for iPhone and Android. Draft, trade and sign your way to a basketball dynasty with live game views.">
 <meta name="twitter:image" content="https://seanlynchgames.com/img/hardwood-gm.png">
-<meta name="theme-color" content="#ff5d47">
+<meta name="theme-color" content="#e9791a">
 <link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -37,7 +37,7 @@
 </header>
 </div>
 
-<main id="main" tabindex="-1">
+<main id="main" class="gp-hw" tabindex="-1">
 <section class="chapter ch-hw" aria-labelledby="h-game">
   <svg class="motif" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
     <circle cx="1000" cy="400" r="120"/><circle cx="1000" cy="400" r="300"/>
@@ -47,7 +47,7 @@
   </svg>
   <div class="wrap">
     <div class="copy">
-      <div class="lockup"><img class="appicon" src="/img/hardwood-gm-144.webp" alt="Hardwood GM app icon" width="64" height="64"><div class="eyebrow"><span class="tag">Basketball management sim</span></div></div>
+      <div class="lockup"><img class="appicon" style="view-transition-name:icon-hardwood-gm" src="/img/hardwood-gm-144.webp" alt="Hardwood GM app icon" width="64" height="64"><div class="eyebrow"><span class="tag">Basketball management sim</span></div></div>
       <h1 class="title" id="h-game">Hardwood GM<span class="h1-tag">Draft, trade and sign your way to a dynasty.</span></h1>
       <p class="pitch">Hardwood GM is a basketball management sim. Draft, trade and sign your way to a basketball dynasty, then follow your team through live games. It is free on iPhone and Android.</p>
       <div class="getrow">
@@ -64,6 +64,16 @@
     </div>
   </div>
 </section>
+<section class="shots" aria-labelledby="h-shots">
+  <h2 class="sr" id="h-shots">Screenshots</h2>
+  <div class="strip wrap" role="region" aria-label="Hardwood GM screenshots" tabindex="0">
+    <img src="/img/shots/hw-1.webp" alt="You are the GM: live game with the score and play-by-play" width="600" height="1304" loading="lazy" decoding="async">
+    <img src="/img/shots/hw-2.webp" alt="Trade screen with a rival GM offer" width="600" height="1304" loading="lazy" decoding="async">
+    <img src="/img/shots/hw-3.webp" alt="Draft board: you are on the clock" width="600" height="1304" loading="lazy" decoding="async">
+    <img src="/img/shots/hw-4.webp" alt="You are fired: season review screen" width="600" height="1304" loading="lazy" decoding="async">
+  </div>
+</section>
+
 
 <section class="sec" aria-labelledby="h-feat">
   <div class="wrap">
@@ -94,11 +104,17 @@
   <div class="wrap">
     <h2 id="h-more">More games</h2>
     <ul class="games">
-        <li><a href="/lifeline/"><img src="/img/lifeline-144.webp" alt="" width="48" height="48" loading="lazy"><span>LifeLine</span></a></li>
-        <li><a href="/gridiron-gm/"><img src="/img/gridiron-gm-144.webp" alt="" width="48" height="48" loading="lazy"><span>Gridiron GM</span></a></li>
-        <li><a href="/gatecrash-army/"><img src="/img/gatecrash-army-144.webp" alt="" width="48" height="48" loading="lazy"><span>Gatecrash Army</span></a></li>
-        <li><a href="/diamondedge/"><img src="/img/diamondedge-144.webp" alt="" width="48" height="48" loading="lazy"><span>DiamondEdge</span></a></li>
+        <li><a class="g-ll" href="/lifeline/"><img src="/img/lifeline-144.webp" alt="" width="56" height="56" loading="lazy"><span><b>LifeLine</b><small>Live a whole life, make the choices that shape it, and see where it takes you.</small></span></a></li>
+        <li><a class="g-gg" href="/gridiron-gm/"><img src="/img/gridiron-gm-144.webp" alt="" width="56" height="56" loading="lazy"><span><b>Gridiron GM</b><small>Run a pro football team from the draft room to the title game.</small></span></a></li>
+        <li><a class="g-gc" href="/gatecrash-army/"><img src="/img/gatecrash-army-144.webp" alt="" width="56" height="56" loading="lazy"><span><b>Gatecrash Army</b><small>Grow your army on the run and smash through every gate.</small></span></a></li>
+        <li><a class="g-de" href="/diamondedge/"><img src="/img/diamondedge-144.webp" alt="" width="56" height="56" loading="lazy"><span><b>DiamondEdge</b><small>Matchups, player trends and game breakdowns for the NFL, college football, NBA, WNBA and MLB, all in one app.</small></span></a></li>
     </ul>
+  </div>
+</section>
+<section class="band" aria-label="Discord">
+  <div class="wrap">
+    <p>Join the Discord for game news, bug reports and ideas.</p>
+    <a class="btn" href="https://discord.gg/RfzHaZznNZ" rel="noopener">Join the Discord</a>
   </div>
 </section>
 </main>
@@ -116,7 +132,7 @@
         </div>
       </div>
       <nav class="ft-col" aria-label="Games"><p class="ft-h">Games</p><ul><li><a href="/lifeline/">LifeLine</a></li><li><a href="/hardwood-gm/">Hardwood GM</a></li><li><a href="/gridiron-gm/">Gridiron GM</a></li><li><a href="/gatecrash-army/">Gatecrash Army</a></li><li><a href="/diamondedge/">DiamondEdge</a></li></ul></nav>
-      <nav class="ft-col" aria-label="Support"><p class="ft-h">Support</p><ul><li><a href="mailto:support@seanlynchgames.com">Email support</a></li><li><a href="https://discord.gg/RfzHaZznNZ" rel="noopener">Discord community</a></li><li><a href="https://apps.apple.com/developer/id6804358221" rel="noopener">App Store</a></li><li><a href="https://play.google.com/store/apps/developer?id=Sean+T+Lynch" rel="noopener">Google Play</a></li></ul></nav>
+      <nav class="ft-col" aria-label="Support"><p class="ft-h">Support</p><ul><li><a href="mailto:support@seanlynchgames.com">Email support</a></li><li><a href="https://discord.gg/RfzHaZznNZ" rel="noopener">Discord community</a></li><li><a href="https://apps.apple.com/developer/id6804358221" rel="noopener">App Store</a></li><li><a href="https://play.google.com/store/apps/developer?id=Sean+T+Lynch" rel="noopener">Google Play</a></li><li><a href="/press/">Press</a></li></ul></nav>
     </div>
     <div class="ft-bot"><span>&copy; 2026 Sean Lynch Games</span><a href="mailto:support@seanlynchgames.com">support@seanlynchgames.com</a></div>
   </div>
