@@ -1,0 +1,288 @@
+<title>Gridiron GM Privacy</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+  :root{
+    --bg:#f7f5f1;
+    --surface:#ffffff;
+    --surface-2:#f0ede6;
+    --border:#e2ddd2;
+    --ink:#1b1712;
+    --ink-dim:#6b6459;
+    --accent:#c7761f;
+    --accent-ink:#fff8ef;
+    --ok:#3f7a4f;
+    --no:#a33b2f;
+    --font-display:'Barlow Condensed',system-ui,sans-serif;
+    --font-body:'Inter',system-ui,sans-serif;
+    --font-mono:'JetBrains Mono',ui-monospace,monospace;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#14110d;
+      --surface:#1c1812;
+      --surface-2:#241f18;
+      --border:#332c22;
+      --ink:#f1ece1;
+      --ink-dim:#a89d8c;
+      --accent:#e0983f;
+      --accent-ink:#1c1812;
+      --ok:#6bbf7f;
+      --no:#e0796a;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#14110d;
+    --surface:#1c1812;
+    --surface-2:#241f18;
+    --border:#332c22;
+    --ink:#f1ece1;
+    --ink-dim:#a89d8c;
+    --accent:#e0983f;
+    --accent-ink:#1c1812;
+    --ok:#6bbf7f;
+    --no:#e0796a;
+  }
+
+  *{box-sizing:border-box;}
+  body{
+    background:var(--bg);
+    color:var(--ink);
+    font-family:var(--font-body);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{
+    max-width:680px;
+    margin:0 auto;
+    padding:56px 24px 96px;
+  }
+  header{
+    border-bottom:3px solid var(--ink);
+    padding-bottom:20px;
+    margin-bottom:32px;
+    display:flex;
+    align-items:flex-end;
+    justify-content:space-between;
+    gap:16px;
+    flex-wrap:wrap;
+  }
+  .wordmark{
+    font-family:var(--font-display);
+    font-weight:700;
+    font-size:clamp(32px,6vw,44px);
+    letter-spacing:0.01em;
+    text-transform:uppercase;
+    line-height:0.95;
+    text-wrap:balance;
+  }
+  .wordmark span{color:var(--accent);}
+  .meta{
+    font-family:var(--font-mono);
+    font-size:12px;
+    color:var(--ink-dim);
+    text-align:right;
+  }
+  .lede{
+    font-size:17px;
+    color:var(--ink-dim);
+    max-width:56ch;
+    margin-bottom:40px;
+  }
+
+  .board{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:1px;
+    background:var(--border);
+    border:1px solid var(--border);
+    margin-bottom:48px;
+    border-radius:10px;
+    overflow:hidden;
+  }
+  .cell{
+    background:var(--surface);
+    padding:18px 20px;
+  }
+  .cell .k{
+    font-family:var(--font-mono);
+    font-size:10.5px;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color:var(--ink-dim);
+    margin-bottom:8px;
+  }
+  .cell .v{
+    font-family:var(--font-display);
+    font-size:20px;
+    font-weight:600;
+  }
+  .tag{
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    font-family:var(--font-mono);
+    font-size:11px;
+    padding:2px 0;
+  }
+  .dot{width:7px;height:7px;border-radius:50%;flex:none;}
+  .dot.ok{background:var(--ok);}
+  .dot.no{background:var(--no);}
+
+  section{margin-bottom:40px;}
+  h2{
+    font-family:var(--font-display);
+    font-weight:700;
+    font-size:22px;
+    text-transform:uppercase;
+    letter-spacing:0.01em;
+    margin:0 0 4px;
+    text-wrap:balance;
+  }
+  .h2-sub{
+    font-family:var(--font-mono);
+    font-size:11.5px;
+    color:var(--accent);
+    text-transform:uppercase;
+    letter-spacing:0.06em;
+    margin-bottom:14px;
+  }
+  p{margin:0 0 12px;}
+  p:last-child{margin-bottom:0;}
+  ul{margin:0 0 12px;padding-left:20px;}
+  li{margin-bottom:6px;}
+  code, .inline-mono{
+    font-family:var(--font-mono);
+    font-size:0.92em;
+    background:var(--surface-2);
+    padding:1px 5px;
+    border-radius:4px;
+    border:1px solid var(--border);
+  }
+
+  .sdk-table{
+    border:1px solid var(--border);
+    border-radius:10px;
+    overflow:hidden;
+    background:var(--surface);
+  }
+  .sdk-row{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:0;
+    border-top:1px solid var(--border);
+  }
+  .sdk-row:first-child{border-top:none;}
+  .sdk-row > div{padding:14px 18px;}
+  .sdk-row .name{
+    font-family:var(--font-display);
+    font-weight:600;
+    font-size:16px;
+    background:var(--surface-2);
+  }
+  .sdk-row .what{
+    color:var(--ink-dim);
+    font-size:14px;
+  }
+
+  footer{
+    margin-top:56px;
+    padding-top:20px;
+    border-top:1px solid var(--border);
+    font-family:var(--font-mono);
+    font-size:11.5px;
+    color:var(--ink-dim);
+    display:flex;
+    justify-content:space-between;
+    gap:12px;
+    flex-wrap:wrap;
+  }
+  a{color:var(--accent);}
+
+  @media (max-width:480px){
+    header{flex-direction:column;align-items:flex-start;}
+    .meta{text-align:left;}
+  }
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="wordmark">Gridiron<br><span>GM</span></div>
+    <div class="meta">PRIVACY POLICY<br>EFFECTIVE 13 OCT 2026</div>
+  </header>
+
+  <p class="lede">Gridiron GM is a football front‑office simulation. This page explains, in plain terms, what the app does and does not do with your data — because the honest answer is: almost nothing.</p>
+
+  <div class="board">
+    <div class="cell">
+      <div class="k">Account required</div>
+      <div class="v"><span class="tag"><span class="dot no"></span>No</span></div>
+    </div>
+    <div class="cell">
+      <div class="k">Your save data</div>
+      <div class="v"><span class="tag"><span class="dot ok"></span>On device</span></div>
+    </div>
+    <div class="cell">
+      <div class="k">Analytics</div>
+      <div class="v"><span class="tag"><span class="dot no"></span>None</span></div>
+    </div>
+    <div class="cell">
+      <div class="k">Ad tracking</div>
+      <div class="v"><span class="tag"><span class="dot no"></span>Only if you allow</span></div>
+    </div>
+    <div class="cell">
+      <div class="k">Data sold to anyone</div>
+      <div class="v"><span class="tag"><span class="dot no"></span>Never</span></div>
+    </div>
+  </div>
+
+  <section>
+    <h2>What the app itself collects</h2>
+    <div class="h2-sub">Nothing</div>
+    <p>Gridiron GM makes no network calls of its own. Your career — your club, roster, cap sheet, draft history, every season you've played — is a save file that lives only on your device. There is no account, no login, no server we operate, and no way for us to see your save even if we wanted to.</p>
+  </section>
+
+  <section>
+    <h2>What the two SDKs collect</h2>
+    <div class="h2-sub">Third-party, optional, disclosed here</div>
+    <p>The app uses two outside services, only for the two things this kind of game reasonably needs: showing an optional rewarded advert, and processing an optional purchase. Neither can see your game.</p>
+    <div class="sdk-table">
+      <div class="sdk-row">
+        <div class="name">Google AdMob</div>
+        <div class="what">Powers the opt‑in "watch an advert for a token" button. Adverts are requested <strong>non‑personalized</strong> unless you allow tracking (see below). AdMob may collect a device advertising identifier to serve and measure that advert. Nothing plays automatically: every advert is a screen you chose to open.</div>
+      </div>
+      <div class="sdk-row">
+        <div class="name">RevenueCat</div>
+        <div class="what">Processes optional in‑app purchases (token packs, Token Boost, Front Office Pass) through Apple's App Store. It sees a purchase receipt and an anonymous device identifier — no name, email, or payment details pass through Gridiron GM.</div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Advertising identifier</h2>
+    <div class="h2-sub">iOS App Tracking Transparency</div>
+    <p>When you first open the app, iOS asks whether Gridiron GM may track you (the App Tracking Transparency prompt). In Europe, the UK and Switzerland this comes right after Google's ad consent form. If you tap Allow, AdMob may use your device's advertising identifier to personalize and measure the optional reward adverts, which counts as tracking under Apple's rules. If you decline, adverts stay non‑personalized and the identifier is not shared. Either way the game plays exactly the same, and the "watch an advert" button works the same. You can change your answer at any time in iOS Settings, Privacy &amp; Security, Tracking.</p>
+  </section>
+
+  <section>
+    <h2>Children</h2>
+    <div class="h2-sub">Rated 4+ · general audience</div>
+    <p>Gridiron GM is rated for a general audience and is not directed at children. It contains no chat, no user‑generated content, and no way to contact another person through the app.</p>
+  </section>
+
+  <section>
+    <h2>Changes to this policy</h2>
+    <div class="h2-sub">This page is the current version</div>
+    <p>If what the app collects ever changes, this page changes with it before that update ships. There is no mailing list, because we don't have your address to send one to.</p>
+  </section>
+
+  <section>
+    <h2>Contact</h2>
+    <div class="h2-sub">A person, not a form</div>
+    <p>Questions about this policy or the app: <a href="mailto:support@seanlynchgames.com">support@seanlynchgames.com</a></p>
+  </section>
+
+  <footer>
+    <span>Gridiron GM — Sean Lynch</span>
+    <span>Fictional clubs, players and coaches. Not affiliated with any professional football league.</span>
+  </footer>
+</div>
