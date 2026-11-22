@@ -96,9 +96,11 @@ h1.title{font-size:clamp(44px,7vw,96px);font-size:clamp(44px,15cqi,104px);line-h
 .fan .main{position:relative;z-index:1}
 
 /* phone */
+.scene{margin:0 auto;width:min(100%,340px)}.scene img{display:block;width:100%;height:auto;filter:drop-shadow(0 30px 34px rgba(0,0,0,.35)) drop-shadow(0 8px 12px rgba(0,0,0,.2))}
 .phone-wrap{container-type:inline-size;width:min(100%,290px)}
 .phone{width:100%;aspect-ratio:9/18.5;border-radius:13cqw;padding:2.6cqw;background:#0b0d10;position:relative;box-shadow:0 40px 70px -28px rgba(0,0,0,.6),0 12px 24px -12px rgba(0,0,0,.35),inset 0 0 0 .5cqw #2a2f35;transition:transform .9s cubic-bezier(.2,.8,.2,1);transform-origin:50% 100%}
 .phone.pre{transform:rotate(4deg) translateY(18px)}
+.scr.shot{padding:0;background:#0b0d10}.scr.shot img{width:100%;height:100%;object-fit:cover;object-position:top;display:block}
 .scr{position:relative;height:100%;border-radius:10.8cqw;overflow:hidden;padding:11cqw 5.5cqw 5cqw;display:flex;flex-direction:column;gap:3cqw;font-family:var(--text);font-size:4.4cqw;line-height:1.25;background:var(--sbg);color:var(--sfg)}
 .scr::before{content:"";position:absolute;top:2.4cqw;left:50%;transform:translateX(-50%);width:24cqw;height:5.6cqw;border-radius:3cqw;background:#000}
 .scr::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(115deg,rgba(255,255,255,.12),transparent 38%)}
@@ -283,32 +285,7 @@ footer a{display:inline-flex;align-items:center;min-height:44px}
       </div>
     </div>
     <div class="stage">
-      <div class="fan" aria-hidden="true">
-        <div class="phone-wrap peek l"><div class="phone"><div class="scr s-ll">
-          <div class="h-age">Age 8</div><div class="sub">Primary school</div>
-          <div class="stat"><span>Happy</span><div class="trk"><i style="--v:90%"></i></div></div>
-          <div class="stat"><span>Smarts</span><div class="trk"><i style="--v:40%"></i></div></div>
-          <div class="stat"><span>Looks</span><div class="trk"><i style="--v:52%"></i></div></div>
-          <div class="scard push"><p>Pick a hobby for the summer.</p><div class="btnrow"><div class="fb a">Art</div><div class="fb b">Soccer</div></div></div>
-        </div></div></div>
-        <div class="phone-wrap peek r"><div class="phone"><div class="scr s-ll">
-          <div class="h-age">Age 34</div><div class="sub">Career</div>
-          <div class="stat"><span>Health</span><div class="trk"><i style="--v:66%"></i></div></div>
-          <div class="stat"><span>Smarts</span><div class="trk"><i style="--v:78%"></i></div></div>
-          <div class="stat"><span>Happy</span><div class="trk"><i style="--v:47%"></i></div></div>
-          <div class="scard push"><p>A new job offer arrives.</p><div class="btnrow"><div class="fb a">Accept</div><div class="fb b">Decline</div></div></div>
-        </div></div></div>
-        <div class="phone-wrap main"><div class="phone settle"><div class="scr s-ll">
-          <div class="h-age">Age 17</div><div class="sub">High school, junior year</div>
-          <div class="stat"><span>Health</span><div class="trk"><i style="--v:82%"></i></div></div>
-          <div class="stat"><span>Happy</span><div class="trk"><i style="--v:64%"></i></div></div>
-          <div class="stat"><span>Smarts</span><div class="trk"><i style="--v:71%"></i></div></div>
-          <div class="stat"><span>Looks</span><div class="trk"><i style="--v:58%"></i></div></div>
-          <div class="scard log"><div class="row2"><span>Age 15</span><span>Joined the school band</span></div><div class="row2"><span>Age 16</span><span>Passed the driving test</span></div><div class="row2"><span>Age 17</span><span>Got a part-time job</span></div></div>
-          <div class="scard log"><div class="row2"><span>Bank</span><span>$1,240</span></div><div class="row2"><span>Job</span><span>Cashier, 12 hrs a week</span></div><div class="row2"><span>Relationship</span><span>Single</span></div></div>
-          <div class="scard push"><p>Friends are going out tonight. The big exam is tomorrow.</p><div class="btnrow"><div class="fb a">Study</div><div class="fb b">Go out</div></div></div>
-        </div></div></div>
-      </div>
+      <figure class="scene" aria-hidden="true"><img src="img/scenes/t-ll.webp" alt="" decoding="async" width="536" height="996"></figure>
     </div>
   </div>
 </section>
@@ -344,15 +321,7 @@ footer a{display:inline-flex;align-items:center;min-height:44px}
       </div>
     </div>
     <div class="stage">
-      <div class="phone-wrap" aria-hidden="true"><div class="phone settle"><div class="scr s-hw">
-        <div class="h-age">Draft night</div><div class="sub">Round 1, pick 7</div>
-        <div class="pro"><span class="av">G</span><div><b>Guard, age 19</b><div class="trk"><i style="--v:78%"></i></div></div></div>
-        <div class="pro"><span class="av">F</span><div><b>Forward, age 20</b><div class="trk"><i style="--v:64%"></i></div></div></div>
-        <div class="pro"><span class="av">C</span><div><b>Center, age 21</b><div class="trk"><i style="--v:55%"></i></div></div></div>
-        <div class="pro"><span class="av">W</span><div><b>Wing, age 19</b><div class="trk"><i style="--v:48%"></i></div></div></div>
-        <div class="pro"><span class="av">G</span><div><b>Guard, age 22</b><div class="trk"><i style="--v:40%"></i></div></div></div>
-        <div class="scard push"><p>Best on the board: the guard.</p><div class="btnrow"><div class="fb a">Draft</div><div class="fb b">Trade pick</div></div></div>
-      </div></div></div>
+      <figure class="scene" aria-hidden="true"><img src="img/scenes/t-hw.webp" alt="" decoding="async" width="515" height="971"></figure>
     </div>
   </div>
 </section>
@@ -374,14 +343,7 @@ footer a{display:inline-flex;align-items:center;min-height:44px}
       </div>
     </div>
     <div class="stage">
-      <div class="phone-wrap" aria-hidden="true"><div class="phone settle"><div class="scr s-gg">
-        <div class="h-age">3rd and 4</div><div class="sub">Fourth quarter, your ball</div>
-        <div class="field">
-          <i style="left:22%;top:62%"></i><i style="left:34%;top:64%"></i><i style="left:46%;top:62%"></i><i style="left:58%;top:64%"></i><i style="left:70%;top:62%"></i><i style="left:46%;top:80%"></i><i style="left:80%;top:70%"></i>
-          <i class="d" style="left:26%;top:40%"></i><i class="d" style="left:40%;top:38%"></i><i class="d" style="left:54%;top:38%"></i><i class="d" style="left:68%;top:40%"></i><i class="d" style="left:46%;top:18%"></i>
-        </div>
-        <div class="btnrow"><div class="fb a">Slant</div><div class="fb b">Screen</div></div>
-      </div></div></div>
+      <figure class="scene" aria-hidden="true"><img src="img/scenes/t-gg.webp" alt="" decoding="async" width="532" height="1005"></figure>
     </div>
   </div>
 </section>
@@ -403,15 +365,7 @@ footer a{display:inline-flex;align-items:center;min-height:44px}
       </div>
     </div>
     <div class="stage">
-      <div class="phone-wrap" aria-hidden="true"><div class="phone settle"><div class="scr s-gc">
-        <div class="h-age">Gate 4</div><div class="sub">Pick a side to grow your army</div>
-        <div class="lane">
-          <div class="gates"><div class="gate g1">+10</div><div class="gate g2">x2</div></div>
-          <div class="gates"><div class="gate g1">+25</div><div class="gate g2">x3</div></div>
-          <div class="crowd"></div>
-        </div>
-        <div class="stat"><span>Army</span><div class="trk"><i style="--v:62%"></i></div></div>
-      </div></div></div>
+      <figure class="scene" aria-hidden="true"><img src="img/scenes/t-gc.webp" alt="" decoding="async" width="600" height="873"></figure>
     </div>
   </div>
 </section>
@@ -435,14 +389,7 @@ footer a{display:inline-flex;align-items:center;min-height:44px}
       </div>
     </div>
     <div class="stage">
-      <div class="phone-wrap" aria-hidden="true"><div class="phone settle"><div class="scr s-de">
-        <div class="h-age">Today</div><div class="sub">Games on the board</div>
-        <div class="scard"><div class="row2"><span>NFL: KC at BUF</span><span>4:25 PM</span></div><div class="row2"><span>NBA: LAL at BOS</span><span>7:30 PM</span></div><div class="row2"><span>NCAAF: Top 25</span><span>12 games</span></div></div>
-        <div class="scard"><div class="row2"><span>Injury report</span><span>Updated</span></div><div class="row2"><span>Lines</span><span>Posted</span></div></div>
-        <div class="scard push"><div class="row2"><span>Player trend</span><span class="chip">Heating up</span></div>
-          <svg class="spark" viewBox="0 0 100 30" preserveAspectRatio="none"><polyline points="0,24 14,20 28,22 42,14 56,17 70,9 84,11 100,3"/></svg>
-        </div>
-      </div></div></div>
+      <div class="phone-wrap" aria-hidden="true"><div class="phone settle"><div class="scr shot"><img src="img/shots/de.webp" alt="" decoding="async"></div></div></div>
     </div>
   </div>
 </section>
