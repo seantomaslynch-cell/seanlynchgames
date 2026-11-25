@@ -186,3 +186,10 @@ main{--acc:var(--acc-l)}
   .site-head nav a.ico{padding:0}
 }
 .games a>span{display:contents}
+.gl{margin:0;padding:0;list-style:none;border-top:1px solid var(--line)}
+.gl li{padding:14px 0 14px 22px;border-bottom:1px solid var(--line);position:relative;font-weight:600}
+.gl li::before{content:"";position:absolute;left:4px;top:23px;width:8px;height:8px;border-radius:2px;background:var(--acc)}
+.gl a,.sec .wrap>p a,.chip a{color:inherit;text-underline-offset:3px;font-weight:700}
+@media (min-width:900px){.sec.wide>.wrap{display:block}.sec.wide>.wrap>h1{position:static;margin:6px 0 18px;max-width:22ch}}
+.sec .wrap>p a{white-space:nowrap}
+.band p a{white-space:nowrap;color:inherit;font-weight:700;text-underline-offset:3px}
