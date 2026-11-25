@@ -156,3 +156,51 @@ Welcome to the Sean Lynch Games Discord. I am the solo developer behind LifeLine
 - Friday: share-your-saves prompt. Ask for screenshots, repost a favorite (with permission).
 - Sunday: release notes if anything shipped, otherwise a short "what is next" post. Pin the bug-report template monthly.
 Cross-post each new clip from section 2 in #announcements after it goes live elsewhere. Do not promise dates for updates that have not shipped.
+
+---
+
+## Press routes, verified 2026-11-25
+
+Checked on each site's own page. Emails on Droid Gamers, Gamezebo and Pocket Tactics are hidden by Cloudflare: open the page in a browser to copy them.
+
+| Outlet | Route | Active | Fit | Notes |
+|---|---|---|---|---|
+| Droid Gamers | droidgamers.com/contact-us/ (email on page) | yes, posts Nov 24 2026 | Gatecrash Army, LifeLine | Include trailer and screenshots. No unasked APKs. 150+ emails a week. |
+| Gamezebo | gamezebo.com/get-reviewed/ (pitch email on page) | yes, posts Nov 24 2026 | LifeLine, Hardwood GM | Description, screenshots, video, short pitch. No PR services. |
+| Pocket Tactics | pockettactics.com/about ("Where to send pitches") | yes | Hardwood GM, Gridiron GM | Mostly big F2P games; low odds. |
+| Android Authority | news@androidauthority.com | unknown | none now | News and press releases only, not game submissions. Skip. |
+| TouchArcade | contact page blocks tools (403) | unknown | all iPhone | Check by hand. |
+| Pocket Gamer | no contact page found | unknown | | Try BigIndiePitch.com events instead. |
+| AppAdvice | domain does not resolve | dead | | Drop. |
+
+### Ready to send: Droid Gamers (Gatecrash Army)
+
+Subject: Gatecrash Army for Android: grow your army on the run
+
+Hi Droid Gamers team,
+
+I make mobile games as a one-person studio, Sean Lynch Games. Gatecrash Army is an action runner: grow your army on the run, smash through every gate, and pick the right math gates ahead. It is free on Google Play.
+
+Screenshots, icons and store links: https://seanlynchgames.com/press/
+Game page: https://seanlynchgames.com/gatecrash-army/
+
+Happy to answer questions. Thanks for your time,
+Sean Lynch
+Sean Lynch Games | support@seanlynchgames.com
+
+### Ready to send: Gamezebo (LifeLine)
+
+Subject: LifeLine: a life sim where you pick an action and press Age
+
+Hi Gamezebo team,
+
+I make mobile games as a one-person studio, Sean Lynch Games. LifeLine is a life simulator: live a whole life, make the choices that shape it, and see where it takes you. Pick an action, press Age to move forward, and follow your character profile and life stats. It is free on iPhone and Android.
+
+Screenshots, icons and store links: https://seanlynchgames.com/press/
+Game page: https://seanlynchgames.com/lifeline/
+
+I can send a promo build or answer questions. Thanks for your time,
+Sean Lynch
+Sean Lynch Games | support@seanlynchgames.com
+
+Sending: support@seanlynchgames.com only forwards (Porkbun to Gmail), so it cannot send yet. Set up "Send mail as" in Gmail with an SMTP sender for the domain, or send from the address of your choice.
