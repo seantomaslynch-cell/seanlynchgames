@@ -1,0 +1,54 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@500;700;800&display=swap');
+html,body{margin:0;width:1080px;height:1920px;overflow:hidden;background:#05050a}
+body{font-family:Inter,sans-serif;color:#fff;position:relative}
+/* Aura: slow drifting colored glows behind everything */
+.aura{position:absolute;border-radius:50%;filter:blur(140px);opacity:.75;animation:drift 9s ease-in-out infinite alternate}
+.a1{width:900px;height:900px;background:#7b3cff;left:-300px;top:200px}
+.a2{width:800px;height:800px;background:#ff3c8e;right:-320px;top:760px;animation-delay:-3s}
+.a3{width:700px;height:700px;background:#1fd3ff;left:120px;bottom:-260px;animation-delay:-6s;opacity:.55}
+@keyframes drift{from{transform:translate(0,0) scale(1)}to{transform:translate(80px,-60px) scale(1.15)}}
+.grain{position:absolute;inset:0;background:repeating-linear-gradient(0deg,rgba(255,255,255,.025) 0 2px,transparent 2px 4px);mix-blend-mode:overlay}
+.vig{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 45%,transparent 40%,rgba(0,0,0,.75) 100%)}
+.wrap{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;text-align:center}
+.kick{margin-top:260px;letter-spacing:.45em;font-weight:800;font-size:30px;color:rgba(255,255,255,.8);padding-left:.45em}
+h1{font-family:'Bebas Neue';font-weight:400;font-size:250px;line-height:.86;margin:34px 0 0;
+ background:linear-gradient(180deg,#fff 30%,#c9b6ff 100%);-webkit-background-clip:text;color:transparent;
+ filter:drop-shadow(0 0 40px rgba(160,110,255,.55))}
+.sub{font-size:40px;font-weight:500;color:rgba(255,255,255,.82);margin-top:30px}
+.sub b{color:#fff;font-weight:800}
+/* Orbit of app icons */
+.ring{position:relative;width:860px;height:560px;margin-top:50px}
+.ic{position:absolute;width:190px;height:190px;border-radius:44px;overflow:hidden;
+ box-shadow:0 0 0 2px rgba(255,255,255,.18),0 0 60px var(--g),0 24px 50px rgba(0,0,0,.6);
+ animation:float 4s ease-in-out infinite alternate}
+.ic img{width:100%;height:100%;display:block}
+.ic span{display:none}
+@keyframes float{from{transform:translateY(0) rotate(var(--r))}to{transform:translateY(-22px) rotate(var(--r))}}
+.n{position:absolute;font-weight:700;font-size:26px;color:rgba(255,255,255,.85);width:240px;text-align:center}
+.cta{margin-top:20px;font-family:'Bebas Neue';font-size:96px;letter-spacing:.04em;line-height:1}
+.url{margin-top:18px;font-size:38px;font-weight:700;padding:18px 44px;border-radius:999px;
+ background:rgba(255,255,255,.08);border:2px solid rgba(255,255,255,.35);backdrop-filter:blur(10px);
+ box-shadow:0 0 50px rgba(160,110,255,.45)}
+.free{margin-top:22px;font-size:26px;color:rgba(255,255,255,.65);font-weight:500}
+</style></head><body>
+<div class="aura a1"></div><div class="aura a2"></div><div class="aura a3"></div>
+<div class="grain"></div><div class="vig"></div>
+<div class="wrap">
+  <div class="kick">SEAN LYNCH GAMES</div>
+  <h1>I BUILD<br>GAMES.</h1>
+  <div class="sub">Designed, coded and shipped <b>by me.</b></div>
+  <div class="ring">
+    <div class="ic" style="left:335px;top:0;--g:#ffb347;--r:0deg"><img src="../../img/hardwood-gm.png"></div>
+    <div class="ic" style="left:40px;top:120px;--g:#7b3cff;--r:-8deg;animation-delay:-1s"><img src="../../img/lifeline.png"></div>
+    <div class="ic" style="left:630px;top:120px;--g:#ff3c8e;--r:8deg;animation-delay:-2s"><img src="../../img/gatecrash-army.png"></div>
+    <div class="ic" style="left:170px;top:345px;--g:#3ee08a;--r:-4deg;animation-delay:-3s"><img src="../../img/gridiron-gm.png"></div>
+    <div class="ic" style="left:500px;top:345px;--g:#3ee08a;--r:4deg;animation-delay:-1.5s"><img src="../../img/diamondedge.png"></div>
+  </div>
+  <div class="cta">GO PLAY</div>
+  <div class="url">seanlynchgames.com</div>
+  <div class="free">LifeLine &middot; Hardwood GM &middot; Gridiron GM &middot; Gatecrash Army &middot; DiamondEdge</div>
+</div>
+</body></html>
