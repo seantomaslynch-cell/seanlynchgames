@@ -1,0 +1,40 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@500;700&display=swap');
+html,body{margin:0;width:1080px;height:1920px;overflow:hidden;background:#0d1224}
+body{font-family:Inter,sans-serif;color:#fff;position:relative}
+/* Higgsfield rainy-window clip, still image underneath as fallback */
+.bg,.bg video{position:absolute;inset:0;width:1080px;height:1920px;object-fit:cover}
+.bg{background:url(rain-bg.png) center/cover}
+/* Text sits over the dark window so the cozy sill (mug, candle, phone) stays visible below */
+.shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,10,25,.55) 0%,rgba(8,10,25,.25) 40%,rgba(8,10,25,0) 58%)}
+.wrap{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;text-align:center}
+.kick{margin-top:280px;font-family:'Instrument Serif';font-style:italic;font-size:56px;color:rgba(255,226,200,.85)}
+h1{margin:10px 80px 0;font-family:'Instrument Serif';font-weight:400;font-size:112px;line-height:1.02;
+ text-shadow:0 4px 30px rgba(0,0,20,.6)}
+h1 i{display:block;color:#ffd6a8;text-shadow:0 0 30px rgba(255,170,90,.45),0 4px 30px rgba(0,0,20,.6)}
+.row{display:flex;gap:22px;padding:22px 24px;border-radius:44px;margin-top:56px;
+ background:rgba(255,255,255,.1);border:1.5px solid rgba(255,255,255,.28);backdrop-filter:blur(16px)}
+.ic{width:132px;height:132px;border-radius:30px;overflow:hidden;box-shadow:0 0 28px rgba(255,180,110,.3),0 12px 30px rgba(0,0,0,.45);
+ animation:float 3.5s ease-in-out infinite alternate}
+.ic img{width:100%;height:100%;display:block}
+@keyframes float{from{transform:translateY(0)}to{transform:translateY(-10px)}}
+.url{margin-top:34px;font-size:34px;font-weight:700;letter-spacing:.02em;padding:16px 42px;border-radius:999px;
+ background:rgba(255,236,214,.92);color:#3a2418;box-shadow:0 10px 40px rgba(255,170,90,.35)}
+</style></head><body>
+<div class="bg"><video src="rain-bg.mp4" autoplay muted loop playsinline></video></div>
+<div class="shade"></div>
+<div class="wrap">
+  <div class="kick">lately:</div>
+  <h1>rainy nights, warm tea<i>&amp; little worlds I made</i></h1>
+  <div class="row">
+    <div class="ic"><img src="../../img/lifeline.png"></div>
+    <div class="ic" style="animation-delay:-.7s"><img src="../../img/hardwood-gm.png"></div>
+    <div class="ic" style="animation-delay:-1.4s"><img src="../../img/gridiron-gm.png"></div>
+    <div class="ic" style="animation-delay:-2.1s"><img src="../../img/gatecrash-army.png"></div>
+    <div class="ic" style="animation-delay:-2.8s"><img src="../../img/diamondedge.png"></div>
+  </div>
+  <div class="url">seanlynchgames.com</div>
+</div>
+</body></html>
