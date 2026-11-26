@@ -1,0 +1,51 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800;900&display=swap');
+html,body{margin:0;width:1080px;height:1920px;overflow:hidden;background:#05060b}
+body{font-family:Inter,sans-serif;color:#fff;position:relative}
+/* Calm aura: slow drifting indigo/blue/teal glows */
+.aura{position:absolute;border-radius:50%;filter:blur(150px);animation:drift 9s ease-in-out infinite alternate}
+.a1{width:900px;height:900px;background:#4b3cff;opacity:.55;left:-340px;top:140px}
+.a2{width:820px;height:820px;background:#1f7bff;opacity:.45;right:-360px;top:820px;animation-delay:-3s}
+.a3{width:700px;height:700px;background:#19c8b4;opacity:.3;left:160px;bottom:-300px;animation-delay:-6s}
+@keyframes drift{from{transform:translate(0,0) scale(1)}to{transform:translate(70px,-50px) scale(1.12)}}
+.grid-bg{position:absolute;inset:0;opacity:.07;
+ background-image:linear-gradient(rgba(255,255,255,.6) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.6) 1px,transparent 1px);
+ background-size:90px 90px;mask-image:radial-gradient(ellipse at 50% 40%,#000 20%,transparent 70%);-webkit-mask-image:radial-gradient(ellipse at 50% 40%,#000 20%,transparent 70%)}
+.vig{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 45%,transparent 45%,rgba(0,0,0,.7) 100%)}
+.wrap{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;text-align:center}
+.kick{margin-top:280px;display:flex;align-items:center;gap:22px;letter-spacing:.42em;font-weight:700;font-size:26px;color:rgba(255,255,255,.72);padding-left:.42em}
+.kick:before,.kick:after{content:"";width:70px;height:1.5px;background:rgba(255,255,255,.35)}
+h1{margin:40px 0 0;font-weight:900;font-size:168px;line-height:.92;letter-spacing:-.05em;
+ background:linear-gradient(180deg,#fff 40%,#b9c6ff 100%);-webkit-background-clip:text;color:transparent;
+ filter:drop-shadow(0 0 40px rgba(90,110,255,.35))}
+.sub{margin-top:34px;font-size:38px;font-weight:500;color:rgba(255,255,255,.7)}
+/* Clean 3 + 2 grid of apps with names */
+.apps{display:flex;flex-wrap:wrap;justify-content:center;gap:44px 54px;width:840px;margin-top:90px}
+.app{width:200px;display:flex;flex-direction:column;align-items:center;animation:float 4s ease-in-out infinite alternate}
+.app img{width:184px;height:184px;border-radius:42px;display:block;
+ box-shadow:0 0 0 1.5px rgba(255,255,255,.16),0 0 50px rgba(80,110,255,.25),0 22px 44px rgba(0,0,0,.6)}
+.app p{margin:20px 0 0;font-size:27px;font-weight:600;color:rgba(255,255,255,.88);white-space:nowrap}
+@keyframes float{from{transform:translateY(0)}to{transform:translateY(-12px)}}
+.spacer{flex:1}
+.url{margin-bottom:330px;font-size:38px;font-weight:700;letter-spacing:.01em;padding:20px 50px;border-radius:999px;
+ background:#fff;color:#0a0c18;box-shadow:0 0 60px rgba(90,120,255,.45),0 12px 30px rgba(0,0,0,.5)}
+</style></head><body>
+<div class="aura a1"></div><div class="aura a2"></div><div class="aura a3"></div>
+<div class="grid-bg"></div><div class="vig"></div>
+<div class="wrap">
+  <div class="kick">SEAN LYNCH GAMES</div>
+  <h1>I build<br>games.</h1>
+  <div class="sub">Designed, coded and shipped by me.</div>
+  <div class="apps">
+    <div class="app"><img src="../../img/lifeline.png"><p>LifeLine</p></div>
+    <div class="app" style="animation-delay:-.8s"><img src="../../img/hardwood-gm.png"><p>Hardwood GM</p></div>
+    <div class="app" style="animation-delay:-1.6s"><img src="../../img/gridiron-gm.png"><p>Gridiron GM</p></div>
+    <div class="app" style="animation-delay:-2.4s"><img src="../../img/gatecrash-army.png"><p>Gatecrash Army</p></div>
+    <div class="app" style="animation-delay:-3.2s"><img src="../../img/diamondedge.png"><p>DiamondEdge</p></div>
+  </div>
+  <div class="spacer"></div>
+  <div class="url">seanlynchgames.com</div>
+</div>
+</body></html>
