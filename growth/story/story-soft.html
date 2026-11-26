@@ -1,0 +1,50 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;600;700&display=swap');
+html,body{margin:0;width:1080px;height:1920px;overflow:hidden}
+body{font-family:Inter,sans-serif;color:#3b2340;position:relative;
+ background:linear-gradient(170deg,#ffe3ec 0%,#f6d9ff 45%,#ffe8d6 100%)}
+/* Soft pastel aura blobs */
+.b{position:absolute;border-radius:50%;filter:blur(120px);animation:drift 8s ease-in-out infinite alternate}
+.b1{width:760px;height:760px;background:#ffb3cf;left:-260px;top:120px}
+.b2{width:700px;height:700px;background:#d9b8ff;right:-240px;top:820px;animation-delay:-3s}
+.b3{width:620px;height:620px;background:#ffd2b0;left:180px;bottom:-240px;animation-delay:-5s}
+@keyframes drift{from{transform:translate(0,0) scale(1)}to{transform:translate(60px,-50px) scale(1.12)}}
+.grain{position:absolute;inset:0;opacity:.18;mix-blend-mode:multiply;
+ background-image:radial-gradient(rgba(80,40,80,.5) 1px,transparent 1px);background-size:5px 5px}
+/* Sparkles */
+.sp{position:absolute;color:#fff;font-size:44px;text-shadow:0 0 18px #fff,0 0 30px #ffb3cf;animation:tw 2.4s ease-in-out infinite}
+@keyframes tw{0%,100%{opacity:.25;transform:scale(.8)}50%{opacity:1;transform:scale(1.15)}}
+.wrap{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;text-align:center}
+.pov{margin-top:270px;font-family:'Instrument Serif';font-style:italic;font-size:64px;color:#9b4f8c}
+h1{font-family:'Instrument Serif';font-weight:400;font-size:132px;line-height:.98;margin:6px 60px 0;letter-spacing:-.01em}
+h1 i{color:#c2418f}
+/* Polaroids */
+.stack{position:relative;width:1080px;height:760px;margin-top:40px}
+.pol{position:absolute;background:#fff;padding:16px 16px 64px;border-radius:6px;
+ box-shadow:0 30px 60px rgba(120,50,110,.25),0 4px 10px rgba(0,0,0,.08);animation:bob 4s ease-in-out infinite alternate}
+.pol img{display:block;width:250px;height:440px;object-fit:cover;object-position:top;border-radius:2px}
+.pol p{position:absolute;left:0;right:0;bottom:14px;margin:0;font-family:'Instrument Serif';font-style:italic;font-size:36px;color:#5a3a5c}
+@keyframes bob{from{transform:translateY(0) rotate(var(--r))}to{transform:translateY(-18px) rotate(var(--r))}}
+.cta{font-family:'Instrument Serif';font-style:italic;font-size:76px;margin-top:10px}
+.url{margin-top:16px;font-weight:700;font-size:36px;padding:18px 46px;border-radius:999px;background:rgba(255,255,255,.65);
+ border:2px solid #fff;box-shadow:0 10px 40px rgba(194,65,143,.25);color:#3b2340}
+</style></head><body>
+<div class="b b1"></div><div class="b b2"></div><div class="b b3"></div><div class="grain"></div>
+<div class="sp" style="left:120px;top:250px">&#10022;</div>
+<div class="sp" style="right:140px;top:420px;animation-delay:-.8s">&#10022;</div>
+<div class="sp" style="left:90px;top:1180px;animation-delay:-1.6s;font-size:32px">&#10022;</div>
+<div class="sp" style="right:90px;top:1330px;animation-delay:-1.1s">&#10022;</div>
+<div class="wrap">
+  <div class="pov">pov:</div>
+  <h1>the guy you're talking to <i>makes video games</i></h1>
+  <div class="stack">
+    <div class="pol" style="left:90px;top:90px;--r:-9deg;animation-delay:-1s"><img src="../../img/shots/hw-1.webp"><p>hardwood gm</p></div>
+    <div class="pol" style="left:690px;top:90px;--r:8deg;animation-delay:-2s"><img src="../../img/shots/gc-1.webp"><p>gatecrash army</p></div>
+    <div class="pol" style="left:383px;top:20px;--r:-1deg;z-index:2"><img src="../../img/shots/ll-1.webp"><p>lifeline &#9825;</p></div>
+  </div>
+  <div class="cta">go play them &#9825;</div>
+  <div class="url">seanlynchgames.com</div>
+</div>
+</body></html>

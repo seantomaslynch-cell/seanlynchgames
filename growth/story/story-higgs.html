@@ -1,0 +1,45 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@500;700;800&display=swap');
+html,body{margin:0;width:1080px;height:1920px;overflow:hidden;background:#07040c}
+body{font-family:Inter,sans-serif;color:#fff;position:relative}
+/* Higgsfield background: animated clip if present, still image underneath as fallback */
+.bg,.bg video{position:absolute;inset:0;width:1080px;height:1920px;object-fit:cover}
+.bg{background:url(higgs-bg.png) center/cover}
+/* Darken top and bottom so the text reads over the scene */
+.shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(5,3,10,.85) 0%,rgba(5,3,10,.25) 30%,rgba(5,3,10,0) 45%,rgba(5,3,10,.15) 62%,rgba(5,3,10,.9) 82%,rgba(5,3,10,.95) 100%)}
+.wrap{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;text-align:center}
+.kick{margin-top:260px;letter-spacing:.45em;font-weight:800;font-size:28px;color:rgba(255,255,255,.75);padding-left:.45em}
+h1{font-family:'Bebas Neue';font-weight:400;font-size:176px;line-height:.9;margin:26px 0 0;
+ text-shadow:0 0 40px rgba(200,90,255,.6),0 6px 30px rgba(0,0,0,.6)}
+h1 span{color:#ff7ad9}
+.spacer{flex:1}
+.row{display:flex;gap:26px;margin-bottom:46px}
+.ic{width:150px;height:150px;border-radius:34px;overflow:hidden;
+ box-shadow:0 0 0 2px rgba(255,255,255,.2),0 0 44px rgba(200,90,255,.55),0 18px 40px rgba(0,0,0,.6);
+ animation:float 3.5s ease-in-out infinite alternate}
+.ic img{width:100%;height:100%;display:block}
+@keyframes float{from{transform:translateY(0)}to{transform:translateY(-14px)}}
+.cta{font-family:'Bebas Neue';font-size:88px;letter-spacing:.04em;line-height:1}
+.url{margin:16px 0 330px;font-size:36px;font-weight:700;padding:16px 42px;border-radius:999px;
+ background:rgba(255,255,255,.1);border:2px solid rgba(255,255,255,.4);backdrop-filter:blur(10px);
+ box-shadow:0 0 50px rgba(200,90,255,.45)}
+</style></head><body>
+<div class="bg"><video src="higgs-bg.mp4" autoplay muted loop playsinline></video></div>
+<div class="shade"></div>
+<div class="wrap">
+  <div class="kick">SEAN LYNCH GAMES</div>
+  <h1>WHILE YOU SLEPT<br><span>I SHIPPED GAMES.</span></h1>
+  <div class="spacer"></div>
+  <div class="row">
+    <div class="ic"><img src="../../img/lifeline.png"></div>
+    <div class="ic" style="animation-delay:-.7s"><img src="../../img/hardwood-gm.png"></div>
+    <div class="ic" style="animation-delay:-1.4s"><img src="../../img/gridiron-gm.png"></div>
+    <div class="ic" style="animation-delay:-2.1s"><img src="../../img/gatecrash-army.png"></div>
+    <div class="ic" style="animation-delay:-2.8s"><img src="../../img/diamondedge.png"></div>
+  </div>
+  <div class="cta">GO PLAY</div>
+  <div class="url">seanlynchgames.com</div>
+</div>
+</body></html>
