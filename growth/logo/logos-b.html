@@ -1,0 +1,80 @@
+﻿<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;700;900&family=Space+Grotesk:wght@700&display=swap');
+html,body{margin:0;width:1600px;background:#0b0e12;font-family:Inter,sans-serif;color:#fff}
+.sheet{padding:60px;display:grid;grid-template-columns:1fr 1fr;gap:36px}
+.opt{background:#12161c;border:1px solid #222a33;border-radius:28px;padding:44px 50px;display:grid;gap:34px}
+.lbl{font-size:20px;font-weight:700;letter-spacing:.2em;color:#ffc21a}
+.lbl small{display:block;margin-top:6px;font-size:17px;letter-spacing:0;font-weight:500;color:#8c96a0}
+.row{display:flex;align-items:center;gap:28px}
+.lock{display:flex;align-items:center;gap:22px;margin-left:16px}
+.tile{position:relative;width:150px;height:150px;border-radius:34px;display:grid;place-items:center;background:#101418;box-shadow:0 0 0 1px #2a323b;overflow:hidden}
+.tile.s{width:96px;height:96px;border-radius:22px}
+.tile.light{background:#f4f1ea;box-shadow:none}
+.wm b{display:block;font-weight:900;font-size:40px;letter-spacing:-.035em;line-height:.95}
+.wm span{display:block;margin-top:6px;font-weight:700;font-size:15px;letter-spacing:.62em;color:#ffc21a}
+.m{font-family:'Space Grotesk';font-weight:700;letter-spacing:-.09em;line-height:1;color:#fff;position:relative}
+.m i{font-style:normal;color:#ffc21a}
+/* B2 underline */
+.u{display:flex;flex-direction:column;align-items:center}
+.u .bar{height:.09em;width:1.05em;margin-top:.06em;border-radius:.05em;background:#ffc21a}
+/* B3 gold tile */
+.gold{background:linear-gradient(145deg,#ffe27a,#ffc21a 50%,#e09a00)!important;box-shadow:none!important}
+.gold .m{color:#101418}.gold .m i{color:#fff}
+/* B4 outline */
+.out{background:transparent!important;box-shadow:inset 0 0 0 5px #ffc21a!important}
+.out.s{box-shadow:inset 0 0 0 3.5px #ffc21a!important}
+.dot{display:inline-block;width:.16em;height:.16em;border-radius:50%;background:#ffc21a;margin-left:.1em}
+/* B5 bracket */
+.br{position:absolute;left:18%;bottom:18%;width:64%;height:64%;border-left:.09em solid #ffc21a;border-bottom:.09em solid #ffc21a;border-radius:0 0 0 .06em}
+/* B6 italic */
+.it{transform:skewX(-12deg)}
+.sp{position:absolute;left:-.42em;top:.38em;width:.3em;height:.07em;background:#ffc21a;border-radius:.04em;box-shadow:-.04em .16em 0 0 #ffc21a80}
+</style></head><body>
+<div class="sheet">
+
+<div class="opt"><div class="lbl">B1 &middot; ORIGINAL<small>The one you picked, for comparison.</small></div>
+<div class="row">
+  <div class="tile"><div class="m" style="font-size:88px">S<i>L</i></div></div>
+  <div class="tile light s"><div class="m" style="font-size:56px;color:#101418">S<i style="color:#d99600">L</i></div></div>
+  <div class="lock"><div class="tile s"><div class="m" style="font-size:56px">S<i>L</i></div></div><div class="wm"><b>SEAN LYNCH</b><span>GAMES</span></div></div>
+</div></div>
+
+<div class="opt"><div class="lbl">B2 &middot; UNDERLINE<small>Gold bar under the letters. Reads like a signature.</small></div>
+<div class="row">
+  <div class="tile"><div class="m u" style="font-size:80px"><div>S<i>L</i></div><div class="bar"></div></div></div>
+  <div class="tile light s"><div class="m u" style="font-size:50px;color:#101418"><div>S<i style="color:#d99600">L</i></div><div class="bar" style="background:#d99600"></div></div></div>
+  <div class="lock"><div class="tile s"><div class="m u" style="font-size:50px"><div>S<i>L</i></div><div class="bar"></div></div></div><div class="wm"><b>SEAN LYNCH</b><span>GAMES</span></div></div>
+</div></div>
+
+<div class="opt"><div class="lbl">B3 &middot; GOLD TILE<small>Flipped: gold tile, dark S, white L. Loud on a home screen.</small></div>
+<div class="row">
+  <div class="tile gold"><div class="m" style="font-size:88px">S<i>L</i></div></div>
+  <div class="tile gold s"><div class="m" style="font-size:56px">S<i>L</i></div></div>
+  <div class="lock"><div class="tile gold s"><div class="m" style="font-size:56px">S<i>L</i></div></div><div class="wm"><b>SEAN LYNCH</b><span>GAMES</span></div></div>
+</div></div>
+
+<div class="opt"><div class="lbl">B4 &middot; OUTLINE<small>Thin gold frame, white SL, gold dot. Light and clean.</small></div>
+<div class="row">
+  <div class="tile out"><div class="m" style="font-size:80px">SL<span class="dot"></span></div></div>
+  <div class="tile out s" style="background:#f4f1ea!important"><div class="m" style="font-size:50px;color:#101418">SL<span class="dot" style="background:#d99600"></span></div></div>
+  <div class="lock"><div class="tile out s"><div class="m" style="font-size:50px">SL<span class="dot"></span></div></div><div class="wm"><b>SEAN LYNCH</b><span>GAMES</span></div></div>
+</div></div>
+
+<div class="opt"><div class="lbl">B5 &middot; CORNER L<small>The L is a gold bracket hugging a white S.</small></div>
+<div class="row">
+  <div class="tile" style="font-size:110px"><div class="br"></div><div class="m" style="font-size:78px;margin:-4px 0 0 10px">S</div></div>
+  <div class="tile light s" style="font-size:70px"><div class="br" style="border-color:#d99600"></div><div class="m" style="font-size:50px;color:#101418;margin:-3px 0 0 6px">S</div></div>
+  <div class="lock"><div class="tile s" style="font-size:70px"><div class="br"></div><div class="m" style="font-size:50px;margin:-3px 0 0 6px">S</div></div><div class="wm"><b>SEAN LYNCH</b><span>GAMES</span></div></div>
+</div></div>
+
+<div class="opt"><div class="lbl">B6 &middot; FAST<small>Forward lean with two speed marks. More energy.</small></div>
+<div class="row">
+  <div class="tile"><div class="m it" style="font-size:80px;margin-left:30px"><span class="sp"></span>S<i>L</i></div></div>
+  <div class="tile light s"><div class="m it" style="font-size:50px;color:#101418;margin-left:18px"><span class="sp" style="background:#d99600;box-shadow:-.04em .16em 0 0 #d9960080"></span>S<i style="color:#d99600">L</i></div></div>
+  <div class="lock"><div class="tile s"><div class="m it" style="font-size:50px;margin-left:18px"><span class="sp"></span>S<i>L</i></div></div><div class="wm"><b>SEAN LYNCH</b><span>GAMES</span></div></div>
+</div></div>
+
+</div>
+</body></html>
