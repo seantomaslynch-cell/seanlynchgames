@@ -1,0 +1,43 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;700;900&family=JetBrains+Mono:wght@500&display=swap');
+html,body{margin:0;width:1080px;height:1920px;overflow:hidden;background:#05070d}
+body{font-family:Inter,sans-serif;color:#fff;position:relative}
+/* Higgsfield late-night desk clip, still image underneath as fallback */
+.bg,.bg video{position:absolute;inset:0;width:1080px;height:1920px;object-fit:cover}
+.bg{background:url(night-bg.png) center/cover}
+/* Text over the night sky up top; dark floor at the bottom for icons and URL */
+.shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(3,5,12,.55) 0%,rgba(3,5,12,.1) 30%,rgba(0,0,0,0) 45%,rgba(0,0,0,0) 66%,rgba(3,5,12,.7) 80%,rgba(3,5,12,.92) 100%)}
+.wrap{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;text-align:center}
+.time{margin-top:290px;font-family:'JetBrains Mono';font-size:30px;letter-spacing:.4em;padding-left:.4em;color:rgba(170,200,255,.8)}
+h1{margin:18px 0 0;font-weight:900;font-size:150px;line-height:.92;letter-spacing:-.045em;
+ text-shadow:0 0 50px rgba(110,160,255,.35),0 8px 30px rgba(0,0,0,.6)}
+.sub{margin-top:26px;font-weight:500;font-size:38px;color:rgba(225,235,255,.82);letter-spacing:.01em}
+.spacer{flex:1}
+.row{display:flex;gap:22px;margin-bottom:38px}
+.ic{width:132px;height:132px;border-radius:30px;overflow:hidden;
+ box-shadow:0 0 0 1.5px rgba(255,255,255,.18),0 0 34px rgba(90,140,255,.28),0 16px 36px rgba(0,0,0,.7);
+ animation:float 3.5s ease-in-out infinite alternate}
+.ic img{width:100%;height:100%;display:block}
+@keyframes float{from{transform:translateY(0)}to{transform:translateY(-8px)}}
+.url{margin-bottom:330px;font-family:'JetBrains Mono';font-size:32px;letter-spacing:.06em;padding:16px 40px;border-radius:14px;
+ background:rgba(10,14,26,.6);border:1.5px solid rgba(160,190,255,.45);backdrop-filter:blur(10px);color:#dfe8ff}
+</style></head><body>
+<div class="bg"><video src="night-bg.mp4" autoplay muted loop playsinline></video></div>
+<div class="shade"></div>
+<div class="wrap">
+  <div class="time">2:47 AM</div>
+  <h1>locked in.</h1>
+  <div class="sub">building games while the city sleeps</div>
+  <div class="spacer"></div>
+  <div class="row">
+    <div class="ic"><img src="../../img/lifeline.png"></div>
+    <div class="ic" style="animation-delay:-.7s"><img src="../../img/hardwood-gm.png"></div>
+    <div class="ic" style="animation-delay:-1.4s"><img src="../../img/gridiron-gm.png"></div>
+    <div class="ic" style="animation-delay:-2.1s"><img src="../../img/gatecrash-army.png"></div>
+    <div class="ic" style="animation-delay:-2.8s"><img src="../../img/diamondedge.png"></div>
+  </div>
+  <div class="url">seanlynchgames.com</div>
+</div>
+</body></html>
