@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="preconnect" href="https://us.i.posthog.com" crossorigin>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Gridiron GM trades: how the AI values players and picks</title>
+<meta name="description" content="How trades work in Gridiron GM: what a player is worth, how team posture changes the price, why the AI says no, the trade deadline and the Deadline Desk.">
+<link rel="canonical" href="https://seanlynchgames.com/guides/gridiron-gm-trades-and-trade-value/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://seanlynchgames.com/guides/gridiron-gm-trades-and-trade-value/">
+<meta property="og:site_name" content="Sean Lynch Games">
+<meta property="og:title" content="Gridiron GM trades: how the AI values players and picks | Sean Lynch Games">
+<meta property="og:description" content="How trades work in Gridiron GM: what a player is worth, how team posture changes the price, why the AI says no, the trade deadline and the Deadline Desk.">
+<meta property="og:image" content="https://seanlynchgames.com/img/og-guide-gridiron-gm-trades-and-trade-value.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Gridiron GM trades: how the AI values players and picks | Sean Lynch Games">
+<meta name="twitter:description" content="How trades work in Gridiron GM: what a player is worth, how team posture changes the price, why the AI says no, the trade deadline and the Deadline Desk.">
+<meta name="twitter:image" content="https://seanlynchgames.com/img/og-guide-gridiron-gm-trades-and-trade-value.jpg">
+<meta name="theme-color" content="#101418">
+<link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preload" href="/fonts/hanken-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/css/game.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Gridiron GM trades: how the AI values players and picks", "description": "How trades work in Gridiron GM: what a player is worth, how team posture changes the price, why the AI says no, the trade deadline and the Deadline Desk.", "url": "https://seanlynchgames.com/guides/gridiron-gm-trades-and-trade-value/", "author": {"@type": "Organization", "name": "Sean Lynch Games", "url": "https://seanlynchgames.com/"}, "publisher": {"@type": "Organization", "name": "Sean Lynch Games"}, "datePublished": "2026-11-27", "dateModified": "2026-11-27"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Why does the AI reject a trade that looks fair?", "acceptedAnswer": {"@type": "Answer", "text": "Value alone is not enough. The other team wants a margin, roughly 3% to 8% more than it gives up before difficulty, and a deal can also be blocked outright: more than 3 players coming in, no centerpiece for a star, no cap room, a roster that would be illegal, or a no-trade clause. The trade screen names the reason."}}, {"@type": "Question", "name": "Is a player on a bad contract worth anything in a trade?", "acceptedAnswer": {"@type": "Answer", "text": "He can be worth less than nothing. Value is talent minus what the contract costs, and a player paid over the market is also charged for every year of the overpay, up to four years. Dumping bad money usually costs you a pick."}}, {"@type": "Question", "name": "Can I flip a player I just traded for?", "acceptedAnswer": {"@type": "Answer", "text": "Not for a profit right away. For his first 4 regular-season weeks with you, no team pays more than 95% of what he cost."}}, {"@type": "Question", "name": "When is the trade deadline?", "acceptedAnswer": {"@type": "Answer", "text": "Week 9 of the 17-game regular season is the last week trades are allowed. The Deadline Desk, which shows who is buying and selling, opens in weeks 8 and 9 and costs 2 tokens or one rewarded ad, once a season."}}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+<div class="top ch-pr">
+<header class="wrap site-head">
+  <a class="brand" href="/" aria-label="Sean Lynch Games, home"><img class="mono" src="/img/favicon.svg" alt="" width="38" height="38"><b>Sean Lynch Games</b></a>
+  <nav aria-label="Primary"><a href="/#games">All games</a><a href="https://discord.gg/RfzHaZznNZ" rel="noopener">Discord</a><a class="ico" href="https://www.instagram.com/naesofficial/" aria-label="Instagram @NaesOfficial" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.3" cy="6.7" r="1.3" fill="currentColor"/></svg></a><a class="ico" href="https://www.tiktok.com/@naesofficial" aria-label="TikTok @NaesOfficial" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M16.6 3c.4 2.3 1.9 3.9 4.2 4.1v3.2c-1.5.1-2.9-.4-4.2-1.2v6.1c0 3.7-2.9 6.3-6.4 6.3-3.6 0-6.3-2.8-6.1-6.4.2-3.3 3.2-5.9 6.6-5.6v3.3c-1.6-.3-3.3.9-3.4 2.5-.1 1.6 1.2 2.9 2.8 2.9 1.7 0 2.9-1.2 2.9-3V3h3.6z"/></svg></a></nav>
+</header>
+</div>
+
+<main id="main" class="gp-gg" tabindex="-1">
+<section class="sec wide">
+  <div class="wrap">
+    <p class="chip"><a href="/guides/">Guides</a></p>
+    <h1>Gridiron GM trades: how the AI values players and picks</h1>
+    <p>Trading in Gridiron GM is not a coin flip. The other 31 GMs price every player and pick the same way a front office would: talent, age, position, contract and what their own roster needs. Then they answer honestly and tell you why. This guide covers what drives the price, what blocks a deal, and how to read the trade screen, with the real numbers. For contracts and the draft itself, see the salary cap and draft guide.</p>
+    <div class="plinks"><a href="https://apps.apple.com/app/apple-store/id6807910129?pt=129118166&amp;ct=site-guide&amp;mt=8" rel="noopener">App Store</a><a href="https://play.google.com/store/apps/details?id=com.gridirongm.app&amp;referrer=utm_source%3Dsite%26utm_medium%3Dguide" rel="noopener">Google Play</a></div>
+  </div>
+</section>
+<section class="sec">
+  <div class="wrap">
+    <h2>What a player is worth</h2>
+    <ul class="gl">
+      <li>A player's trade value starts with his overall, and the curve is steep. The gap between an 88 and an 82 is far bigger than the gap between a 70 and a 64, which is why stars cost first-round picks.</li>
+      <li>Past 88 it steepens again. Each point above 88 adds another 7%, because there are only a handful of 93s in the league.</li>
+      <li>The roster screen and the trade screen use the same bands: elite (88 and up), star (83 to 87), starter (78 to 82), solid (72 to 77), depth (66 to 71) and fringe (below 66).</li>
+      <li>Age and position matter. The price falls as a player passes his position's peak, so a 29-year-old running back is worth far less than a 29-year-old quarterback. Position also scales value hard: a kicker is priced at a fraction of a quarterback.</li>
+      <li>Specialists never cost a real pick. A kicker or punter is capped at about a mid fourth-round pick, however high his rating.</li>
+      <li>Upside counts, weighted by how many years he has left to reach it. Time left runs to three years past his position's peak, not to age 30 for everybody.</li>
+    </ul>
+  </div>
+</section>
+<section class="sec">
+  <div class="wrap">
+    <h2>The contract is half the price</h2>
+    <ul class="gl">
+      <li>Value is talent minus what you pay for it. A star on a below-market rookie deal is the most valuable asset in the game. A 90 overall on a deal you cannot fit can be worth less than an 82 on a rookie contract.</li>
+      <li>The game compares his cap hit, averaged over up to the next three years, with the market rate for his rating. A cheap deal can lift his value by as much as 42%. An expensive one can cut it by the same share and more.</li>
+      <li>An overpaid player is also charged in real money. For every year still owed, up to four, the overpay is subtracted from his value. So a bad contract can come out below zero, and moving him costs you a pick. Salary dumps are not free.</li>
+      <li>A player with a year or less left is a rental and loses 28%. If he is an 88 or better and 28 or younger, the discount is only 10%, because his team can tag him or re-sign him.</li>
+      <li>Four or more years of control adds 10%.</li>
+      <li>Trades move the cap in a specific way. The incoming player arrives on his base salaries only, because his signing bonus stays with the team that paid it. The outgoing player's remaining bonus turns into dead money for his old team. That is why a team short on cap room cannot simply dump salary at the deadline.</li>
+    </ul>
+  </div>
+</section>
+<section class="sec">
+  <div class="wrap">
+    <h2>Team posture</h2>
+    <ul class="gl">
+      <li>Every team is in one of four modes: All in, Competing, Retooling or Rebuilding. The game scores each team from its record, the number of players rated 80 or higher on the roster (each adds 0.55) and its young core, meaning players 25 or younger with potential 82 or higher (each takes off 0.4). Early in the season it uses last year's wins.</li>
+      <li>A score of 12 or more is All in. 9 to 12 is Competing, 6.5 to 9 is Retooling, and below 6.5 is Rebuilding.</li>
+      <li>Contenders pay for now and rebuilders pay for later. All in teams weigh a player's present rating at 1.35 and his future at 0.65. Rebuilding teams flip that to 0.66 and 1.45.</li>
+      <li>The spread is held tight, on purpose. A team may price a player about 4% under or 6% over what a Competing team would pay, and no more. That stops two teams from making endless profit trading with each other.</li>
+      <li>Picks also tilt a little. All in teams weigh picks at 0.98 and Rebuilding teams at 1.03.</li>
+      <li>Fit is a premium on top. A team that has a hole at a position pays more for the player who fills it, scaled by how much of the hole he really fills, and a backup does not earn a starter's markup. No team will pay more than 25% over the league's consensus price because of fit.</li>
+    </ul>
+  </div>
+</section>
+<section class="sec">
+  <div class="wrap">
+    <h2>Things that move a price</h2>
+    <ul class="gl">
+      <li>Injuries. A player out 2 weeks or less keeps full value. At 8 weeks or more he is worth 62%. In between it slides, so one week of healing never moves the price by more than about 8%.</li>
+      <li>A holdout costs 22%. A player the league knows has asked out costs 12%. The Diva trait costs 7% and the Leader trait adds 4%.</li>
+      <li>Drafted rookies keep their draft slot's price for a while. His rookie deal holds 90% of the slot through his first season. After that it holds 70% if he has grown 2 points or more since the draft, and 45% if he has not.</li>
+      <li>A new position is not priced until it is proven. After a position change, the market uses the lower of his old and new spot until he has 200 snaps at the new one.</li>
+      <li>Just traded for? For his first 4 regular-season weeks with you, no team pays more than 95% of what he cost. You cannot buy a veteran and sell him on for profit the same afternoon.</li>
+    </ul>
+  </div>
+</section>
+<section class="sec">
+  <div class="wrap">
+    <h2>Packages: why a pile of picks does not work</h2>
+    <ul class="gl">
+      <li>A team has one starting job at a position and a limited roster, so every extra player in a package is worth less than the one before. Each further player counts for 72% of the last. Picks decay too, but more gently, at 80%.</li>
+      <li>A bad contract is never discounted. Adding one to a package cannot make it cheaper.</li>
+      <li>A team will not take more than 3 players in one deal.</li>
+      <li>The centerpiece rule protects stars. If you ask for a player worth 1,000 or more on the game's trade scale, roughly a 90 overall starter in his prime, the best piece you send back must be worth at least half of his value. A first-round pick is worth 1,250 to 1,850 on the same scale. Six second-day picks will not buy a franchise player.</li>
+      <li>The same idea works in the draft. When you ask to move up to a slot, the price is the gap between the two slots on the pick chart plus a premium of 8% to 22%, paid with your later picks and next year's. The offer can have at most 4 pieces. Compensatory picks never move.</li>
+    </ul>
+  </div>
+</section>
+<section class="sec">
+  <div class="wrap">
+    <h2>Why the AI says no</h2>
+    <ul class="gl">
+      <li>The AI wants a margin, not parity. Its ask is about 1.03 times what it gives up for an All in team and 1.08 for the rest, then scaled by the Rival trade smarts setting.</li>
+      <li>Hard blocks are separate from value: more than 3 players coming in, no centerpiece, no cap room (the screen shows how far over they would be), a roster over the limit or too short to be legal, no player left at a required position, or a no-trade clause that has not been waived.</li>
+      <li>Roster limits are 53 in season and 90 in the offseason, with a legal minimum of 46 once the season starts.</li>
+      <li>The verdict names the reason: Accepted, Very close, Not enough, Rejected, Cannot fit it, Too many players or No-trade clause.</li>
+      <li>The closeness meter reads straight off the same math. It runs Far apart, Still talking (80% of the way), One piece away (94%) and They say yes. A blocked deal says so instead of showing a bar that more picks would never fill.</li>
+      <li>On "One piece away", the game says a late-round pick either way would probably do it.</li>
+    </ul>
+  </div>
+</section>
+<section class="sec">
+  <div class="wrap">
+    <h2>The league learns how you trade</h2>
+    <ul class="gl">
+      <li>If you dump every veteran for picks, the other teams notice and ask a little more for the picks they send you. If you keep buying veterans with picks, their veterans cost a little more.</li>
+      <li>Each habit adds 3%, weighted toward recent seasons (full weight this year, 60% last year, 35% the year before). A veteran here means 29 or older.</li>
+      <li>The markup is capped at 12% on any one kind of asset. It only applies to trades with you, and it fades when you stop the habit.</li>
+    </ul>
+  </div>
+</section>
+<section class="sec">
+  <div class="wrap">
+    <h2>The trade deadline and the Deadline Desk</h2>
+    <ul class="gl">
+      <li>Week 9 of the 17-game regular season is the last week trades are allowed. Everything before it can be undone. Everything after it cannot, which turns a bad October into a real decision.</li>
+      <li>Near the deadline the AI gets more active. In the last two weeks, winning teams are far more likely to make offers for players you have put on the block, and a buyer there can pay about 18% over the going price.</li>
+      <li>The Deadline Desk shows which teams are buying, which are selling and what each is asking. It opens in weeks 8 and 9 only, and you can use it once a season.</li>
+      <li>The Deadline Desk is not free. It costs 2 tokens or one rewarded ad, and a season's ad and token spend share one use, so you cannot open it twice. It is information only. It does not change any price or any result.</li>
+      <li>"What will make this work?" on a rejected deal is free. It builds a package the AI would accept, starting with your cheapest assets. It reaches for a fourth-round pick before your second-best receiver, and it says so honestly when nothing you own will get a deal done, as with another team's franchise quarterback.</li>
+      <li>The No trades house rule turns all of this off. Every trade path refuses, and you build the roster yourself.</li>
+    </ul>
+  </div>
+</section>
+<section class="sec">
+  <div class="wrap">
+    <h2>Trade tips</h2>
+    <ul class="gl">
+      <li>Sell veterans to All in teams. They price the present highest, so a 30-year-old starter brings the most from a contender.</li>
+      <li>Sell prospects to Rebuilding teams and buy veterans from them. They value the future at 1.45 and the present at 0.66.</li>
+      <li>Check who needs what. A team with a hole at your position pays a fit premium, up to a cap of 25%.</li>
+      <li>Ship the player before his injury shrinks the price, and wait to buy a hurt player until the weeks left are small.</li>
+      <li>Do not bundle depth. Three 74s are worth much less than one 84, so aim for one real piece.</li>
+      <li>Keep your own cap in mind. Taking on a big contract does not cost a pick, but the cap hit stays.</li>
+    </ul>
+  </div>
+</section>
+<section class="sec">
+  <div class="wrap">
+    <h2>Frequently asked questions</h2>
+    <h3>Why does the AI reject a trade that looks fair?</h3>
+    <p>Value alone is not enough. The other team wants a margin, roughly 3% to 8% more than it gives up before difficulty, and a deal can also be blocked outright: more than 3 players coming in, no centerpiece for a star, no cap room, a roster that would be illegal, or a no-trade clause. The trade screen names the reason.</p>
+    <h3>Is a player on a bad contract worth anything in a trade?</h3>
+    <p>He can be worth less than nothing. Value is talent minus what the contract costs, and a player paid over the market is also charged for every year of the overpay, up to four years. Dumping bad money usually costs you a pick.</p>
+    <h3>Can I flip a player I just traded for?</h3>
+    <p>Not for a profit right away. For his first 4 regular-season weeks with you, no team pays more than 95% of what he cost.</p>
+    <h3>When is the trade deadline?</h3>
+    <p>Week 9 of the 17-game regular season is the last week trades are allowed. The Deadline Desk, which shows who is buying and selling, opens in weeks 8 and 9 and costs 2 tokens or one rewarded ad, once a season.</p>
+  </div>
+</section>
+<section class="sec">
+  <div class="wrap">
+    <h2>Get Gridiron GM</h2>
+    <p>Gridiron GM is free on iPhone and Android. See the <a href="/gridiron-gm/">Gridiron GM page</a>, read the <a href="/guides/gridiron-gm-beginners-guide/">beginner's guide</a>, the <a href="/guides/gridiron-gm-salary-cap-and-draft/">salary cap and draft guide</a> or the <a href="/guides/gridiron-gm-game-day-and-development/">game day and development guide</a>, or ask questions in the <a href="https://discord.gg/RfzHaZznNZ" rel="noopener">Discord</a>.</p>
+  </div>
+</section>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="ft-top">
+      <div class="ft-brand">
+        <a class="ft-logo" href="/"><img src="/img/favicon.svg" alt="" width="56" height="56" loading="lazy"><span><b>Sean Lynch Games</b><small>Games for iPhone and Android</small></span></a>
+        <p>Sports sims, a life sim and strategy games, built and updated by one developer.</p>
+        <div class="ft-social">
+          <a href="https://www.instagram.com/naesofficial/" aria-label="Instagram @NaesOfficial" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.3" cy="6.7" r="1.3" fill="currentColor"/></svg><span>Instagram</span></a>
+          <a href="https://www.tiktok.com/@naesofficial" aria-label="TikTok @NaesOfficial" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M16.6 3c.4 2.3 1.9 3.9 4.2 4.1v3.2c-1.5.1-2.9-.4-4.2-1.2v6.1c0 3.7-2.9 6.3-6.4 6.3-3.6 0-6.3-2.8-6.1-6.4.2-3.3 3.2-5.9 6.6-5.6v3.3c-1.6-.3-3.3.9-3.4 2.5-.1 1.6 1.2 2.9 2.8 2.9 1.7 0 2.9-1.2 2.9-3V3h3.6z"/></svg><span>TikTok</span></a>
+          <a href="https://discord.gg/RfzHaZznNZ" aria-label="Join the Sean Lynch Games Discord" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.3 4.4A19.8 19.8 0 0 0 15.4 3l-.6 1.3a18.4 18.4 0 0 0-5.6 0L8.6 3a19.7 19.7 0 0 0-4.9 1.5C.6 9.1-.3 13.6.1 18.1a19.9 19.9 0 0 0 6 3l1.3-2.1a12.9 12.9 0 0 1-2-1l.5-.4a14.2 14.2 0 0 0 12.2 0l.5.4c-.6.4-1.3.7-2 1l1.3 2.1a19.8 19.8 0 0 0 6-3c.5-5.2-.9-9.7-3.6-13.7zM8 15.4c-1.2 0-2.2-1.1-2.2-2.4s1-2.4 2.2-2.4 2.2 1.1 2.2 2.4-1 2.4-2.2 2.4zm8 0c-1.2 0-2.2-1.1-2.2-2.4s1-2.4 2.2-2.4 2.2 1.1 2.2 2.4-1 2.4-2.2 2.4z"/></svg><span>Discord</span></a>
+        </div>
+      </div>
+      <nav class="ft-col" aria-label="Games"><p class="ft-h">Games</p><ul><li><a href="/lifeline/">LifeLine</a></li><li><a href="/hardwood-gm/">Hardwood GM</a></li><li><a href="/gridiron-gm/">Gridiron GM</a></li><li><a href="/gatecrash-army/">Gatecrash Army</a></li><li><a href="/diamondedge/">DiamondEdge</a></li></ul></nav>
+      <nav class="ft-col" aria-label="Support"><p class="ft-h">Support</p><ul><li><a href="mailto:support@seanlynchgames.com">Email support</a></li><li><a href="https://discord.gg/RfzHaZznNZ" rel="noopener">Discord community</a></li><li><a href="https://apps.apple.com/developer/id6804358221" rel="noopener">App Store</a></li><li><a href="https://play.google.com/store/apps/developer?id=Sean+T+Lynch" rel="noopener">Google Play</a></li><li><a href="/updates/">Updates</a></li><li><a href="/guides/">Guides</a></li><li><a href="/press/">Press</a></li></ul></nav>
+    </div>
+    <div class="ft-bot"><span>&copy; 2026 Sean Lynch Games. This site counts visits without cookies.</span><a href="mailto:support@seanlynchgames.com">support@seanlynchgames.com</a></div>
+  </div>
+</footer>
+<script src="/js/a.js" defer></script>
+</body>
+</html>

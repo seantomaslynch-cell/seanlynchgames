@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="preconnect" href="https://us.i.posthog.com" crossorigin>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>DiamondEdge NBA player props guide</title>
+<meta name="description" content="How DiamondEdge builds NBA player prop research: the eight markets, a minutes-first chance, back-to-backs, teammates out, and which markets show a chance.">
+<link rel="canonical" href="https://seanlynchgames.com/guides/diamondedge-nba-props/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://seanlynchgames.com/guides/diamondedge-nba-props/">
+<meta property="og:site_name" content="Sean Lynch Games">
+<meta property="og:title" content="DiamondEdge NBA player props guide | Sean Lynch Games">
+<meta property="og:description" content="How DiamondEdge builds NBA player prop research: the eight markets, a minutes-first chance, back-to-backs, teammates out, and which markets show a chance.">
+<meta property="og:image" content="https://seanlynchgames.com/img/og-guide-diamondedge-nba-props.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="DiamondEdge NBA player props guide | Sean Lynch Games">
+<meta name="twitter:description" content="How DiamondEdge builds NBA player prop research: the eight markets, a minutes-first chance, back-to-backs, teammates out, and which markets show a chance.">
+<meta name="twitter:image" content="https://seanlynchgames.com/img/og-guide-diamondedge-nba-props.jpg">
+<meta name="theme-color" content="#101418">
+<link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preload" href="/fonts/hanken-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/css/game.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "DiamondEdge NBA player props guide", "description": "How DiamondEdge builds NBA player prop research: the eight markets, a minutes-first chance, back-to-backs, teammates out, and which markets show a chance.", "url": "https://seanlynchgames.com/guides/diamondedge-nba-props/", "author": {"@type": "Organization", "name": "Sean Lynch Games", "url": "https://seanlynchgames.com/"}, "publisher": {"@type": "Organization", "name": "Sean Lynch Games"}, "datePublished": "2026-11-27", "dateModified": "2026-11-27"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Which NBA prop markets does DiamondEdge cover?", "acceptedAnswer": {"@type": "Answer", "text": "Points, rebounds, assists, threes made, points plus rebounds plus assists, points plus rebounds, points plus assists, and rebounds plus assists."}}, {"@type": "Question", "name": "Why do some NBA props show no chance?", "acceptedAnswer": {"@type": "Answer", "text": "A market only shows a chance if it passed DiamondEdge's own accuracy check. Rebounds and points plus rebounds did not pass, so they show no chance. A player also needs enough games this season, and enough minutes, to be rated."}}, {"@type": "Question", "name": "Does the NBA chance account for the opponent or pace?", "acceptedAnswer": {"@type": "Answer", "text": "No. DiamondEdge says plainly that the chance comes from the player's recent games, his minutes, back-to-backs and teammates ruled out. The opponent, pace and news after the last injury list read are not in it."}}, {"@type": "Question", "name": "Is NBA research free?", "acceptedAnswer": {"@type": "Answer", "text": "Seeing every NBA line with its AI Hit Chance is part of DiamondEdge Pro. The daily Free AI Pick, graded the next day, and the graded results page are free."}}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+<div class="top ch-pr">
+<header class="wrap site-head">
+  <a class="brand" href="/" aria-label="Sean Lynch Games, home"><img class="mono" src="/img/favicon.svg" alt="" width="38" height="38"><b>Sean Lynch Games</b></a>
+  <nav aria-label="Primary"><a href="/#games">All games</a><a href="https://discord.gg/RfzHaZznNZ" rel="noopener">Discord</a><a class="ico" href="https://www.instagram.com/naesofficial/" aria-label="Instagram @NaesOfficial" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.3" cy="6.7" r="1.3" fill="currentColor"/></svg></a><a class="ico" href="https://www.tiktok.com/@naesofficial" aria-label="TikTok @NaesOfficial" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M16.6 3c.4 2.3 1.9 3.9 4.2 4.1v3.2c-1.5.1-2.9-.4-4.2-1.2v6.1c0 3.7-2.9 6.3-6.4 6.3-3.6 0-6.3-2.8-6.1-6.4.2-3.3 3.2-5.9 6.6-5.6v3.3c-1.6-.3-3.3.9-3.4 2.5-.1 1.6 1.2 2.9 2.8 2.9 1.7 0 2.9-1.2 2.9-3V3h3.6z"/></svg></a></nav>
+</header>
+</div>
+
+<main id="main" class="gp-de" tabindex="-1">
+<section class="sec wide">
+  <div class="wrap">
+    <p class="chip"><a href="/guides/">Guides</a></p>
+    <h1>DiamondEdge NBA player props guide</h1>
+    <p>DiamondEdge is an AI research app for player props, and the NBA is one of its sports. This guide explains how the NBA side works: the eight markets, why the model starts with minutes, what it does with back-to-backs and injured teammates, and which markets show a chance at all. For how the main rating works, read the <a href="/guides/diamondedge-ai-hit-chance/">AI Hit Chance guide</a>. For splits and trends, see <a href="/guides/diamondedge-matchups-and-trends/">how to read matchups and trends</a>. For football, see the <a href="/guides/diamondedge-football-props/">NFL and college football guide</a>. This page sticks to what is specific to the NBA.</p>
+    <div class="plinks"><a href="https://apps.apple.com/app/apple-store/id6804599830?pt=129118166&amp;ct=site-guide&amp;mt=8" rel="noopener">App Store</a><a href="https://play.google.com/store/apps/details?id=com.getdiamondedge.app&amp;referrer=utm_source%3Dsite%26utm_medium%3Dguide" rel="noopener">Google Play</a></div>
+  </div>
+</section>
+<section class="sec">
+  <div class="wrap">
+    <h2>The NBA prop markets</h2>
+    <ul class="gl">
+      <li>Eight markets are covered: points, rebounds, assists, threes made, points plus rebounds plus assists, points plus rebounds, points plus assists, and rebounds plus assists.</li>
+      <li>The first four are single stats. The last four are combos, which add two or three stats together. They suit players whose game spreads across the box score.</li>
+      <li>Each prop card shows the book's line, the best price DiamondEdge sees across the books it tracks, and where a chance is available, an AI Hit Chance for that line.</li>
+      <li>Alternate lines get their own chance too. The model builds a ladder of lines for a market, not just the main one.</li>
+      <li>The NBA season started on October 20, 2026. Early Look lines for the main NBA props can appear from 6 PM Eastern the evening before a game day. Those early rows show lines only, with no chance.</li>
+    </ul>
+  </div>
+</section>
+<section class="sec">
+  <div class="wrap">
+    <h2>Minutes come first</h2>
+    <ul class="gl">
+      <li>The NBA chance starts with minutes, not points. The model estimates how long a player will be on the floor, then applies his rate for the stat per minute. Minutes times rate gives the expected value for the night.</li>
+      <li>Both pieces are shrunk toward a steadier number. Recent games count more than older ones, and last season counts less. That keeps one hot or cold night from swinging the estimate.</li>
+      <li>Minutes are not fixed, so the model does not treat them that way. It uses a spread of how actual minutes have compared with expected minutes in past games. That spread covers blowouts, foul trouble and early exits. The chance at a line is a blend across those outcomes, not a single guess.</li>
+      <li>The shape of the stat itself is modeled too. Counting stats do not follow a smooth bell curve, so the math uses a distribution built for counts, with its own settings for each market.</li>
+      <li>Integer lines can tie. A player with exactly 24 points on a line of 24 is a push, not a miss. The chance is adjusted for that instead of counting a tie as a loss.</li>
+    </ul>
+  </div>
+</section>
+<section class="sec">
+  <div class="wrap">
+    <h2>Back-to-backs and teammates out</h2>
+    <p>Two pieces of game context are built into the NBA chance. Both come from data, never from a guess.</p>
+    <ul class="gl">
+      <li>Back-to-back: if the player's team also played the day before, the model trims his expected minutes by an amount the fit found in past seasons. The card says so in plain words, including the size of the trim.</li>
+      <li>Teammates ruled out: a teammate counts when he played for the team in one of its last 3 games and averaged 15 or more minutes over his last 5 games for it. The minutes those teammates would normally play are added up, and the total is capped at 120.</li>
+      <li>Those lost minutes lift the player's expected minutes and also his per-minute rate, each by amounts fitted from past games. The injury list used is the one from the NBA data provider, and only players listed as out count.</li>
+      <li>If a listed teammate has not played regular rotation minutes lately, the card says the model does not adjust for him.</li>
+      <li>If no teammate is listed out, the card says that too, so you know the adjustment was checked and came up empty.</li>
+    </ul>
+  </div>
+</section>
+<section class="sec">
+  <div class="wrap">
+    <h2>What the NBA chance does not include</h2>
+    <ul class="gl">
+      <li>DiamondEdge states the limit on the card itself. The chance comes from the player's recent games, his minutes, back-to-backs and teammates ruled out.</li>
+      <li>The opponent and the game's pace are not in it. Neither is any news that landed after the last injury list read.</li>
+      <li>That matters when you read a number. A late scratch, a lineup change or a very slow matchup is not reflected until the data catches up. Check the injury report close to tip-off as well.</li>
+      <li>The write-up under each NBA prop is built from the same facts, so it will not mention things the model did not use. It lists recent games, minutes and role, back-to-back status, teammates out and the player's own injury entry.</li>
+    </ul>
+  </div>
+</section>
+<section class="sec">
+  <div class="wrap">
+    <h2>Which NBA markets show a chance</h2>
+    <ul class="gl">
+      <li>A market only shows a chance if it passed an accuracy test first. The test is walk-forward: the model is fit on earlier games, then scored on later ones, month by month across the 2025-26 regular season, using constants fitted only on earlier games.</li>
+      <li>To pass, the stated chance has to land within 3 points of the real hit rate in every 10-point bin that has 200 or more cases. That is checked at the main line and at the alternate lines.</li>
+      <li>Six markets passed: points, assists, threes made, points plus rebounds plus assists, points plus assists, and rebounds plus assists.</li>
+      <li>Two markets did not pass: rebounds and points plus rebounds. They show no chance. DiamondEdge would rather show nothing than a number it could not back up.</li>
+      <li>The fit used regular-season games from the 2024 and 2025 seasons (by start year), 34,663 rateable player games in all.</li>
+    </ul>
+  </div>
+</section>
+<section class="sec">
+  <div class="wrap">
+    <h2>Who gets a rating</h2>
+    <ul class="gl">
+      <li>A player needs enough games before he gets a chance. With no data from last season, he needs 5 games this season. With last season behind him, he needs 2 games this season and at least 10 games from last season.</li>
+      <li>He also needs an expected 18 minutes or more. Books post props for rotation regulars, and a bench player with a small role is not rated.</li>
+      <li>Threes made has a volume floor too. If the expected number of threes is very low, the model gives no chance, because books post that market for real shooters only.</li>
+      <li>Early in the season, ratings fill in as players log games. The app shows an early-season note for the first days, and rows without a rating still show the books' lines.</li>
+    </ul>
+  </div>
+</section>
+<section class="sec">
+  <div class="wrap">
+    <h2>The chance you see is blended with the market</h2>
+    <ul class="gl">
+      <li>On the public NBA board, the chance shown is a blend. It mixes the model's own chance with the books' no-vig chance, which is the books' price with the built-in margin removed.</li>
+      <li>The weight on the books is learned from graded NBA results. It starts at 0.7 and is kept between 0.2 and 0.8.</li>
+      <li>The edge you see is scaled down the same way. Cards keep the raw model chance in the data underneath, and the blend is labeled as a market blend.</li>
+      <li>This keeps the number honest. A model that disagrees wildly with every book is more likely to be missing something than to have found something.</li>
+    </ul>
+  </div>
+</section>
+<section class="sec">
+  <div class="wrap">
+    <h2>Free picks and graded results</h2>
+    <ul class="gl">
+      <li>NBA includes a daily Free AI Pick. It is graded the next day, hit or miss, and the losses stay in the history. Free picks are not moved behind Pro and a losing pick is never hidden.</li>
+      <li>Grading uses the final box score from the NBA data provider. A final game gives over, under or push at the line that was stored when the pick posted. A player who did not play gives a void.</li>
+      <li>The results page lists every graded result, losses included. Read the record as data about the model, not as a promise about any future night.</li>
+      <li>Pick rules are conservative. A pick must beat the break-even of its posted price by at least 3 points, and the NBA posts at most one pick per player per game. Points overs are not posted as picks.</li>
+    </ul>
+  </div>
+</section>
+<section class="sec">
+  <div class="wrap">
+    <h2>What is free and what needs Pro</h2>
+    <ul class="gl">
+      <li>Free: tonight's NBA games and players on the board, the daily Free AI Pick, yesterday's graded picks, and the graded results page.</li>
+      <li>Pro: every NBA line with its AI Hit Chance and the plain-English breakdown of why. NBA research is part of DiamondEdge Pro, and DiamondEdge shows a preview with locked cards to viewers without it.</li>
+      <li>Alerts: you can save a prop and get a line-move alert when the book's main line moves. For NBA rebounds and assists, a half-point move counts. For points and other bigger numbers, it takes a full point.</li>
+    </ul>
+  </div>
+</section>
+<section class="sec">
+  <div class="wrap">
+    <h2>A simple way to read an NBA card</h2>
+    <ul class="gl">
+      <li>Start with the minutes line. If the write-up says his last 3 games are well off his longer average, the role may be moving.</li>
+      <li>Check the back-to-back note and the teammates-out note. They tell you which context the model used.</li>
+      <li>Look at whether a chance is shown. No chance on rebounds or points plus rebounds is by design, not a bug.</li>
+      <li>Compare the chance with the price. The break-even percentage of the posted price is the bar the chance has to clear to mean anything.</li>
+      <li>Then add what the model left out: the opponent, the pace, and the latest injury news.</li>
+    </ul>
+  </div>
+</section>
+<section class="sec">
+  <div class="wrap">
+    <h2>Common questions</h2>
+    <h3>Which NBA prop markets does DiamondEdge cover?</h3>
+    <p>Points, rebounds, assists, threes made, points plus rebounds plus assists, points plus rebounds, points plus assists, and rebounds plus assists.</p>
+    <h3>Why do some NBA props show no chance?</h3>
+    <p>A market only shows a chance if it passed DiamondEdge's own accuracy check. Rebounds and points plus rebounds did not pass, so they show no chance. A player also needs enough games this season, and enough minutes, to be rated.</p>
+    <h3>Does the NBA chance account for the opponent or pace?</h3>
+    <p>No. DiamondEdge says plainly that the chance comes from the player's recent games, his minutes, back-to-backs and teammates ruled out. The opponent, pace and news after the last injury list read are not in it.</p>
+    <h3>Is NBA research free?</h3>
+    <p>Seeing every NBA line with its AI Hit Chance is part of DiamondEdge Pro. The daily Free AI Pick, graded the next day, and the graded results page are free.</p>
+  </div>
+</section>
+<section class="sec">
+  <div class="wrap">
+    <h2>Fine print</h2>
+    <ul class="gl">
+      <li>DiamondEdge does not accept wagers. No outcome is guaranteed, and this guide is about reading data, not about what to play. You must be 21 or older. If gambling stops being fun, call 1-800-GAMBLER.</li>
+    </ul>
+  </div>
+</section>
+<section class="sec">
+  <div class="wrap">
+    <h2>Get DiamondEdge</h2>
+    <p>DiamondEdge is free on iPhone and Android. See the <a href="/diamondedge/">DiamondEdge page</a>, read the <a href="/guides/diamondedge-ai-hit-chance/">AI Hit Chance guide</a>, the <a href="/guides/diamondedge-matchups-and-trends/">matchups and trends guide</a> and the <a href="/guides/diamondedge-football-props/">football props guide</a>, or ask questions in the <a href="https://discord.gg/RfzHaZznNZ" rel="noopener">Discord</a>.</p>
+  </div>
+</section>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="ft-top">
+      <div class="ft-brand">
+        <a class="ft-logo" href="/"><img src="/img/favicon.svg" alt="" width="56" height="56" loading="lazy"><span><b>Sean Lynch Games</b><small>Games for iPhone and Android</small></span></a>
+        <p>Sports sims, a life sim and strategy games, built and updated by one developer.</p>
+        <div class="ft-social">
+          <a href="https://www.instagram.com/naesofficial/" aria-label="Instagram @NaesOfficial" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.3" cy="6.7" r="1.3" fill="currentColor"/></svg><span>Instagram</span></a>
+          <a href="https://www.tiktok.com/@naesofficial" aria-label="TikTok @NaesOfficial" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M16.6 3c.4 2.3 1.9 3.9 4.2 4.1v3.2c-1.5.1-2.9-.4-4.2-1.2v6.1c0 3.7-2.9 6.3-6.4 6.3-3.6 0-6.3-2.8-6.1-6.4.2-3.3 3.2-5.9 6.6-5.6v3.3c-1.6-.3-3.3.9-3.4 2.5-.1 1.6 1.2 2.9 2.8 2.9 1.7 0 2.9-1.2 2.9-3V3h3.6z"/></svg><span>TikTok</span></a>
+          <a href="https://discord.gg/RfzHaZznNZ" aria-label="Join the Sean Lynch Games Discord" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.3 4.4A19.8 19.8 0 0 0 15.4 3l-.6 1.3a18.4 18.4 0 0 0-5.6 0L8.6 3a19.7 19.7 0 0 0-4.9 1.5C.6 9.1-.3 13.6.1 18.1a19.9 19.9 0 0 0 6 3l1.3-2.1a12.9 12.9 0 0 1-2-1l.5-.4a14.2 14.2 0 0 0 12.2 0l.5.4c-.6.4-1.3.7-2 1l1.3 2.1a19.8 19.8 0 0 0 6-3c.5-5.2-.9-9.7-3.6-13.7zM8 15.4c-1.2 0-2.2-1.1-2.2-2.4s1-2.4 2.2-2.4 2.2 1.1 2.2 2.4-1 2.4-2.2 2.4zm8 0c-1.2 0-2.2-1.1-2.2-2.4s1-2.4 2.2-2.4 2.2 1.1 2.2 2.4-1 2.4-2.2 2.4z"/></svg><span>Discord</span></a>
+        </div>
+      </div>
+      <nav class="ft-col" aria-label="Games"><p class="ft-h">Games</p><ul><li><a href="/lifeline/">LifeLine</a></li><li><a href="/hardwood-gm/">Hardwood GM</a></li><li><a href="/gridiron-gm/">Gridiron GM</a></li><li><a href="/gatecrash-army/">Gatecrash Army</a></li><li><a href="/diamondedge/">DiamondEdge</a></li></ul></nav>
+      <nav class="ft-col" aria-label="Support"><p class="ft-h">Support</p><ul><li><a href="mailto:support@seanlynchgames.com">Email support</a></li><li><a href="https://discord.gg/RfzHaZznNZ" rel="noopener">Discord community</a></li><li><a href="https://apps.apple.com/developer/id6804358221" rel="noopener">App Store</a></li><li><a href="https://play.google.com/store/apps/developer?id=Sean+T+Lynch" rel="noopener">Google Play</a></li><li><a href="/updates/">Updates</a></li><li><a href="/guides/">Guides</a></li><li><a href="/press/">Press</a></li></ul></nav>
+    </div>
+    <div class="ft-bot"><span>&copy; 2026 Sean Lynch Games. This site counts visits without cookies.</span><a href="mailto:support@seanlynchgames.com">support@seanlynchgames.com</a></div>
+  </div>
+</footer>
+<script src="/js/a.js" defer></script>
+</body>
+</html>
