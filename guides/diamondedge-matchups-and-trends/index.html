@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="preconnect" href="https://us.i.posthog.com" crossorigin>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>How to read matchups and trends in DiamondEdge</title>
+<meta name="description" content="A plain guide to reading matchups and trends in DiamondEdge: hit rates, splits, hot and cold streaks, pitch mix and game research, and where the data is thin.">
+<link rel="canonical" href="https://seanlynchgames.com/guides/diamondedge-matchups-and-trends/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://seanlynchgames.com/guides/diamondedge-matchups-and-trends/">
+<meta property="og:site_name" content="Sean Lynch Games">
+<meta property="og:title" content="How to read matchups and trends in DiamondEdge | Sean Lynch Games">
+<meta property="og:description" content="A plain guide to reading matchups and trends in DiamondEdge: hit rates, splits, hot and cold streaks, pitch mix and game research, and where the data is thin.">
+<meta property="og:image" content="https://seanlynchgames.com/img/og-guide-diamondedge-matchups-and-trends.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How to read matchups and trends in DiamondEdge | Sean Lynch Games">
+<meta name="twitter:description" content="A plain guide to reading matchups and trends in DiamondEdge: hit rates, splits, hot and cold streaks, pitch mix and game research, and where the data is thin.">
+<meta name="twitter:image" content="https://seanlynchgames.com/img/og-guide-diamondedge-matchups-and-trends.jpg">
+<meta name="theme-color" content="#101418">
+<link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preload" href="/fonts/hanken-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/css/game.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "How to read matchups and trends in DiamondEdge", "description": "A plain guide to reading matchups and trends in DiamondEdge: hit rates, splits, hot and cold streaks, pitch mix and game research, and where the data is thin.", "url": "https://seanlynchgames.com/guides/diamondedge-matchups-and-trends/", "author": {"@type": "Organization", "name": "Sean Lynch Games", "url": "https://seanlynchgames.com/"}, "publisher": {"@type": "Organization", "name": "Sean Lynch Games"}, "dateModified": "2026-11-27"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Why do some splits not show up?", "acceptedAnswer": {"@type": "Answer", "text": "A split under 3 games is hidden, because a sample that small says very little. If you see fewer boxes on a card, that is why."}}, {"@type": "Question", "name": "Is batter versus pitcher history reliable?", "acceptedAnswer": {"@type": "Answer", "text": "Usually not. Most head-to-head samples are a handful of plate appearances spread over several seasons. DiamondEdge shows it, but the larger signals, such as handedness and pitch mix, carry more weight."}}, {"@type": "Question", "name": "Does a hot streak mean the player will keep hitting?", "acceptedAnswer": {"@type": "Answer", "text": "No. A streak is a count of what already happened. The Cold tab sits next to it so you can see both sides before you lean on a hot number."}}, {"@type": "Question", "name": "Which sports have a Trends page?", "acceptedAnswer": {"@type": "Answer", "text": "Trends covers MLB, the NFL, college football and the NBA. Use the sport switcher at the top of the page."}}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+<div class="top ch-pr">
+<header class="wrap site-head">
+  <a class="brand" href="/" aria-label="Sean Lynch Games, home"><img class="mono" src="/img/favicon.svg" alt="" width="38" height="38"><b>Sean Lynch Games</b></a>
+  <nav aria-label="Primary"><a href="/#games">All games</a><a href="https://discord.gg/RfzHaZznNZ" rel="noopener">Discord</a><a class="ico" href="https://www.instagram.com/naesofficial/" aria-label="Instagram @NaesOfficial" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.3" cy="6.7" r="1.3" fill="currentColor"/></svg></a><a class="ico" href="https://www.tiktok.com/@naesofficial" aria-label="TikTok @NaesOfficial" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M16.6 3c.4 2.3 1.9 3.9 4.2 4.1v3.2c-1.5.1-2.9-.4-4.2-1.2v6.1c0 3.7-2.9 6.3-6.4 6.3-3.6 0-6.3-2.8-6.1-6.4.2-3.3 3.2-5.9 6.6-5.6v3.3c-1.6-.3-3.3.9-3.4 2.5-.1 1.6 1.2 2.9 2.8 2.9 1.7 0 2.9-1.2 2.9-3V3h3.6z"/></svg></a></nav>
+</header>
+</div>
+
+<main id="main" class="gp-de" tabindex="-1">
+<section class="sec wide">
+  <div class="wrap">
+    <p class="chip"><a href="/guides/">Guides</a></p>
+    <h1>How to read matchups and trends in DiamondEdge</h1>
+    <p>DiamondEdge is an AI research app for player props in MLB, the NBA, the WNBA, the NFL and college football. It is a research tool, not a sportsbook. This guide covers how to read the matchup and trend screens, so you know what each number counts and where it is thin. For how the main rating works, see the <a href="/guides/diamondedge-ai-hit-chance/">AI Hit Chance guide</a>.</p>
+    <div class="plinks"><a href="https://apps.apple.com/app/apple-store/id6804599830?pt=129118166&amp;ct=site-guide&amp;mt=8" rel="noopener">App Store</a><a href="https://play.google.com/store/apps/details?id=com.getdiamondedge.app&amp;referrer=utm_source%3Dsite%26utm_medium%3Dguide" rel="noopener">Google Play</a></div>
+  </div>
+</section>
+<section class="sec">
+  <div class="wrap">
+    <h2>Start with the matchup, not the number</h2>
+    <ul class="gl">
+      <li>A prop rating is built from several inputs. The matchup is one of them, next to recent form, workload and role, game conditions, and lineup status.</li>
+      <li>Open a card to see the plain-English write-up. It names which inputs pushed the AI Hit Chance up and which were unavailable.</li>
+      <li>Pick a game on the Game Research page to see that game's lines, its projected score and every player prop with its rating. It covers the NFL, college football, MLB and the NBA.</li>
+      <li>On the football side, the AI Picks page has a Fits the matchup view for NFL and college football.</li>
+    </ul>
+  </div>
+</section>
+<section class="sec">
+  <div class="wrap">
+    <h2>Hit rates and splits</h2>
+    <ul class="gl">
+      <li>Each card shows how often the player cleared this exact line in recent games, as counts such as 8 of 10. Counts are easier to judge than a bare percentage.</li>
+      <li>The Splits this season box shows clears of the line overall, at home, away and against today's opponent. Today's side is outlined.</li>
+      <li>A split under 3 games is hidden. If a box is missing, the sample was too small to show.</li>
+      <li>For hitters, a platoon line shows batting average and OPS against left-handed or right-handed pitching this season, with the at-bat count beside it. Check the at-bats before you trust it.</li>
+    </ul>
+  </div>
+</section>
+<section class="sec">
+  <div class="wrap">
+    <h2>MLB matchup panels</h2>
+    <ul class="gl">
+      <li>The research panels on an MLB card include a strikeout ladder, pitch mix, the pitcher's leash over his last 5 starts, and the home plate umpire.</li>
+      <li>There are also home run panels, a pitch fit panel, and a First inning panel.</li>
+      <li>A Batter vs this pitcher panel is there too. Read it with care: the sample is usually small and spans years of change on both sides. Look at how many plate appearances sit behind it first.</li>
+      <li>Park and weather and confirmed lineups feed the rating as well. A row with an unconfirmed lineup should be read as unfinished.</li>
+    </ul>
+  </div>
+</section>
+<section class="sec">
+  <div class="wrap">
+    <h2>The Trends page</h2>
+    <ul class="gl">
+      <li>Trends has three tabs: Hot, Steady and Cold. It covers MLB, the NFL, college football and the NBA, with a sport switcher at the top.</li>
+      <li>Hot lists players who cleared their line in 3 or more straight games.</li>
+      <li>Steady, labelled 8 of 10+ outside football, lists props that hit in at least 80% of the last 10 games. In football it means at least 80% of games played, with a minimum number of games.</li>
+      <li>Cold lists players who missed 3 or more straight. It is there as context before you trust a hot number.</li>
+      <li>Under-direction rows are left out of Trends. Staying under a line in a long run is the normal outcome for many props, so it is not a trend worth surfacing.</li>
+    </ul>
+  </div>
+</section>
+<section class="sec">
+  <div class="wrap">
+    <h2>Reading the warning signs</h2>
+    <ul class="gl">
+      <li>What could go wrong is a short list of reasons the prop might miss. Read it before the rating.</li>
+      <li>Data-confidence labels describe data quality only. Limited means a small sample, so slow down. Line unavailable means no defensible line could be set, and it is not a neutral value.</li>
+      <li>Cards say plainly when data is thin. Treat a thin row as a note to check more, not as a prediction.</li>
+    </ul>
+  </div>
+</section>
+<section class="sec">
+  <div class="wrap">
+    <h2>A simple order to read a card</h2>
+    <ul class="gl">
+      <li>Check the lineup or availability status first.</li>
+      <li>Look at the hit rate counts and how many games sit behind them.</li>
+      <li>Check the splits, then the matchup panel for that sport.</li>
+      <li>Look at the Trends tab for the same player: is the streak hot, steady or cold?</li>
+      <li>Finish with What could go wrong and the data-confidence label.</li>
+    </ul>
+  </div>
+</section>
+<section class="sec">
+  <div class="wrap">
+    <h2>Common questions</h2>
+    <h3>Why do some splits not show up?</h3>
+    <p>A split under 3 games is hidden, because a sample that small says very little. If you see fewer boxes on a card, that is why.</p>
+    <h3>Is batter versus pitcher history reliable?</h3>
+    <p>Usually not. Most head-to-head samples are a handful of plate appearances spread over several seasons. DiamondEdge shows it, but the larger signals, such as handedness and pitch mix, carry more weight.</p>
+    <h3>Does a hot streak mean the player will keep hitting?</h3>
+    <p>No. A streak is a count of what already happened. The Cold tab sits next to it so you can see both sides before you lean on a hot number.</p>
+    <h3>Which sports have a Trends page?</h3>
+    <p>Trends covers MLB, the NFL, college football and the NBA. Use the sport switcher at the top of the page.</p>
+  </div>
+</section>
+<section class="sec">
+  <div class="wrap">
+    <h2>Fine print</h2>
+    <ul class="gl">
+      <li>DiamondEdge does not accept wagers. No outcome is guaranteed, and this guide is about reading data, not about what to play. You must be 21 or older. If gambling stops being fun, call 1-800-GAMBLER.</li>
+    </ul>
+  </div>
+</section>
+<section class="sec">
+  <div class="wrap">
+    <h2>Get DiamondEdge</h2>
+    <p>DiamondEdge is free on iPhone and Android. See the <a href="/diamondedge/">DiamondEdge page</a>, read the <a href="/guides/diamondedge-ai-hit-chance/">AI Hit Chance guide</a>, or ask questions in the <a href="https://discord.gg/RfzHaZznNZ" rel="noopener">Discord</a>.</p>
+  </div>
+</section>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="ft-top">
+      <div class="ft-brand">
+        <a class="ft-logo" href="/"><img src="/img/favicon.svg" alt="" width="56" height="56" loading="lazy"><span><b>Sean Lynch Games</b><small>Games for iPhone and Android</small></span></a>
+        <p>Sports sims, a life sim and strategy games, built and updated by one developer.</p>
+        <div class="ft-social">
+          <a href="https://www.instagram.com/naesofficial/" aria-label="Instagram @NaesOfficial" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.3" cy="6.7" r="1.3" fill="currentColor"/></svg><span>Instagram</span></a>
+          <a href="https://www.tiktok.com/@naesofficial" aria-label="TikTok @NaesOfficial" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M16.6 3c.4 2.3 1.9 3.9 4.2 4.1v3.2c-1.5.1-2.9-.4-4.2-1.2v6.1c0 3.7-2.9 6.3-6.4 6.3-3.6 0-6.3-2.8-6.1-6.4.2-3.3 3.2-5.9 6.6-5.6v3.3c-1.6-.3-3.3.9-3.4 2.5-.1 1.6 1.2 2.9 2.8 2.9 1.7 0 2.9-1.2 2.9-3V3h3.6z"/></svg><span>TikTok</span></a>
+          <a href="https://discord.gg/RfzHaZznNZ" aria-label="Join the Sean Lynch Games Discord" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.3 4.4A19.8 19.8 0 0 0 15.4 3l-.6 1.3a18.4 18.4 0 0 0-5.6 0L8.6 3a19.7 19.7 0 0 0-4.9 1.5C.6 9.1-.3 13.6.1 18.1a19.9 19.9 0 0 0 6 3l1.3-2.1a12.9 12.9 0 0 1-2-1l.5-.4a14.2 14.2 0 0 0 12.2 0l.5.4c-.6.4-1.3.7-2 1l1.3 2.1a19.8 19.8 0 0 0 6-3c.5-5.2-.9-9.7-3.6-13.7zM8 15.4c-1.2 0-2.2-1.1-2.2-2.4s1-2.4 2.2-2.4 2.2 1.1 2.2 2.4-1 2.4-2.2 2.4zm8 0c-1.2 0-2.2-1.1-2.2-2.4s1-2.4 2.2-2.4 2.2 1.1 2.2 2.4-1 2.4-2.2 2.4z"/></svg><span>Discord</span></a>
+        </div>
+      </div>
+      <nav class="ft-col" aria-label="Games"><p class="ft-h">Games</p><ul><li><a href="/lifeline/">LifeLine</a></li><li><a href="/hardwood-gm/">Hardwood GM</a></li><li><a href="/gridiron-gm/">Gridiron GM</a></li><li><a href="/gatecrash-army/">Gatecrash Army</a></li><li><a href="/diamondedge/">DiamondEdge</a></li></ul></nav>
+      <nav class="ft-col" aria-label="Support"><p class="ft-h">Support</p><ul><li><a href="mailto:support@seanlynchgames.com">Email support</a></li><li><a href="https://discord.gg/RfzHaZznNZ" rel="noopener">Discord community</a></li><li><a href="https://apps.apple.com/developer/id6804358221" rel="noopener">App Store</a></li><li><a href="https://play.google.com/store/apps/developer?id=Sean+T+Lynch" rel="noopener">Google Play</a></li><li><a href="/updates/">Updates</a></li><li><a href="/guides/">Guides</a></li><li><a href="/press/">Press</a></li></ul></nav>
+    </div>
+    <div class="ft-bot"><span>&copy; 2026 Sean Lynch Games. This site counts visits without cookies.</span><a href="mailto:support@seanlynchgames.com">support@seanlynchgames.com</a></div>
+  </div>
+</footer>
+<script src="/js/a.js" defer></script>
+</body>
+</html>
