@@ -1,0 +1,23 @@
+<!doctype html>
+<!-- Google Play developer page header. Laid out at 2560x1440 CSS px, rendered at 1.6x = 4096x2304. Render: py -3 play_assets.py -->
+<html><head><meta charset="utf-8"><style>
+@font-face{font-family:"Archivo";font-weight:400 900;font-stretch:62% 125%;src:url(../../fonts/archivo-latin.woff2) format("woff2")}
+@font-face{font-family:"Hanken Grotesk";font-weight:400 700;src:url(../../fonts/hanken-latin.woff2) format("woff2")}
+html,body{margin:0;width:2560px;height:1440px;overflow:hidden}
+body{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;background:
+  radial-gradient(ellipse 1300px 800px at 50% 50%,rgba(255,194,26,.12),transparent 70%),
+  radial-gradient(ellipse 1700px 1000px at 50% 45%,#1a2028,#0b0e12 78%)}
+.wm{position:absolute;left:50%;top:50%;width:2500px;transform:translate(-50%,-50%);opacity:.03}
+.tile{width:360px;height:360px;filter:drop-shadow(0 22px 50px rgba(0,0,0,.6));position:relative}
+h1{margin:44px 0 0;font:900 168px/0.95 "Archivo";font-stretch:78%;letter-spacing:2px;color:#fff;text-transform:uppercase;position:relative}
+h1 b{color:#ffc21a}
+p{margin:22px 0 0;font:600 58px/1.2 "Hanken Grotesk";color:#aab3bd;position:relative}
+.games{display:flex;gap:40px;margin-top:56px;position:relative}
+.games img{width:176px;height:176px;border-radius:39px;box-shadow:0 14px 34px rgba(0,0,0,.55),0 0 0 3px rgba(255,255,255,.08)}
+</style></head><body>
+<img class="wm" src="../../img/logo-mark.svg" alt="">
+<img class="tile" src="../../img/favicon.svg" alt="">
+<h1>Sean Lynch <b>Games</b></h1>
+<p>Games for iPhone and Android</p>
+<div class="games"><img src="../../img/lifeline.png"><img src="../../img/hardwood-gm.png"><img src="../../img/gridiron-gm.png"><img src="../../img/gatecrash-army.png"><img src="../../img/diamondedge.png"></div>
+</body></html>
